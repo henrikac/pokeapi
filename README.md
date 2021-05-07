@@ -16,10 +16,10 @@ TODO: Write a description here
 
 ## Supported Endpoints
 
-* [ ] Berries
-  * [ ] Berries
-  * [ ] Berry Firmnesses
-  * [ ] Berry Flavors
+* [X] Berries
+  * [X] Berries `/berry/{id or name}/`
+  * [X] Berry Firmnesses `/berry-firmness/{id or name}/`
+  * [X] Berry Flavors `/berry-flavor/{id or name}/`
 * [ ] Contests
   * [ ] Contest Types
   * [ ] Contest Effects

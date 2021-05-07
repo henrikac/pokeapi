@@ -10,7 +10,9 @@ module Pokemon
   # The identifier can be either the id or the name of the desired ability.
   # However, if no ability was found a `PokeAPI::Types::Error` is returned.
   #
-  # An `ArgumentError` is raised if the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def ability(identifier : String | Int32) : PokeAPI::Types::Ability | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -46,7 +48,9 @@ module Pokemon
   # The identifier can be either the id or the name of the desired egg group.
   # However, if no egg group was found a `PokeAPI::Types::Error` is returned.
   #
-  # An `ArgumentError` is raised if the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def egg_group(identifier : String | Int32) : PokeAPI::Types::EggGroup | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -72,7 +76,9 @@ module Pokemon
   # |  3 | genderless |
   # +----+------------+
   #
-  # An `ArgumentError` is raised if the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def gender(identifier : String | Int32) : PokeAPI::Types::Gender | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -101,7 +107,9 @@ module Pokemon
   # |  6 | fast-then-very-slow |
   # +----+---------------------+
   #
-  # An `ArgumentError` is raised if the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def growth_rate(identifier : String | Int32) : PokeAPI::Types::GrowthRate | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -118,7 +126,9 @@ module Pokemon
   # The identifier can be either the id or the name of the desired nature.
   # However, if no nature was found a `PokeAPI::Types::Error` is returned.
   #
-  # An `ArgumentError` is raised if the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def nature(identifier : String | Int32) : PokeAPI::Types::Nature | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -146,7 +156,9 @@ module Pokemon
   # |  5 | jump    |
   # +----+---------+
   #
-  # An `ArgumentError` is raised if the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def pokeathlon_stat(identifier : String | Int32) : PokeAPI::Types::PokeathlonStat | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -163,7 +175,9 @@ module Pokemon
   # The identifier can be either the id or the name of the desired pokémon.
   # However, if no pokémon was found a `PokeAPI::Types::Error` is returned.
   #
-  # An `ArgumentError` is raised if identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def pokemon(identifier : String | Int32) : PokeAPI::Types::Pokemon | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -181,8 +195,8 @@ module Pokemon
   # However, if no pokémon was found a `PokeAPI::Types::Error` is returned.
   #
   # An `ArgumentError` is raised if:
-  # + *identifier* is a string AND empty
-  # + *identifier* is an integer AND lower than 1
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def pokemon_location_area(identifier : String | Int32) : PokeAPI::Types::LocationAreaEncounter | PokeAPI::Types::Error
     if identifier.is_a?(String) && identifier.empty?
       raise ArgumentError.new("identifier (name) is undefined")
@@ -219,7 +233,9 @@ module Pokemon
   # | 10 | yellow |
   # +----+--------+
   #
-  # An `ArgumentError` is raised if the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def pokemon_color(identifier : String | Int32) : PokeAPI::Types::PokemonColor | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -236,7 +252,9 @@ module Pokemon
   # The identifier can be either the id or the name of the desired pokémon form.
   # However, if no pokémon form was found a `PokeAPI::Types::Error` is returned.
   #
-  # An `ArgumentError` is raised if the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def pokemon_form(identifier : String | Int32) : PokeAPI::Types::PokemonForm | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -268,7 +286,9 @@ module Pokemon
   # |  9 | waters-edge   |
   # +----+---------------+
   #
-  # An `ArgumentError` is raised if the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def pokemon_habitat(identifier : String | Int32) : PokeAPI::Types::PokemonHabitat | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -305,7 +325,9 @@ module Pokemon
   # | 14 | armor     |
   # +----+-----------+
   #
-  # An `ArgumentError` is raised if the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def pokemon_shape(identifier : String | Int32) : PokeAPI::Types::PokemonShape | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -322,7 +344,9 @@ module Pokemon
   # The identifier can be either the id or the name of the desired pokémon species.
   # However, if no pokémon species was found a `PokeAPI::Types::Error` is returned.
   #
-  # An `ArgumentError` is raised if the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def pokemon_species(identifier : String | Int32) : PokeAPI::Types::PokemonSpecies | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -353,7 +377,9 @@ module Pokemon
   # |  8 | evasion         |
   # +----+-----------------+
   #
-  # An `ArgumentError` is raised if the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def stat(identifier : String | Int32) : PokeAPI::Types::Stat | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -370,7 +396,9 @@ module Pokemon
   # The identifier can be either the id or the name of the desired pokémon type.
   # However, if no type was found a `PokeAPI::Types::Error` is returned.
   #
-  # An `ArgumentError` is raised if the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if:
+  # + the identifier is an empty string
+  # + the identifier is an integer AND lower than 1
   def type(identifier : String | Int32) : PokeAPI::Types::Type | PokeAPI::Types::Error
     identifier = validate_identifier(identifier)
 
@@ -384,7 +412,11 @@ module Pokemon
   end
 
   private def validate_identifier(identifier : String | Int32) : String
-    if identifier.is_a?(Int32)
+    if identifier.is_a?(String)
+      if identifier.empty?
+        raise ArgumentError.new("identifier is undefined")
+      end
+    elsif identifier.is_a?(Int32)
       if identifier < 1
         raise ArgumentError.new("please enter an id greater than or equal to 1")
       end

@@ -28,9 +28,9 @@ TODO: Write a description here
   * [X] Encounter Methods `/encounter-method/{id or name}/`
   * [X] Encounter Conditions `/encounter-condition/{id or name}/`
   * [X] Encounter Condition Values `/encounter-condition-value/{id or name}/`
-* [ ] Evolution
-  * [ ] Evolution Chains
-  * [ ] Evolution Triggers
+* [X] Evolution
+  * [X] Evolution Chains `/evolution-chain/{id}/`
+  * [X] Evolution Triggers `/evolution-trigger/{id or name}/`
 * [ ] Games
   * [ ] Generations
   * [ ] Pokedexes

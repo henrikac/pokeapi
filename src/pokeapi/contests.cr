@@ -36,13 +36,10 @@ module Contests
     return PokeAPI::Error.from_response(response)
   end
 
-  # Returns a `PokeAPI::Types::ContestEffect` based on the given *identifier*.
-  # The identifier can be either the id or the name of the desired contest effect.
+  # Returns a `PokeAPI::Types::ContestEffect` based on the given *id*.
   # However, if no contest effect was found a `PokeAPI::Types::Error` is returned.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if the id is lower than 1
   def contest_effect(id : Int32) : PokeAPI::Types::ContestEffect | PokeAPI::Types::Error
     if id < 1
       raise ArgumentError.new("id must be greater than or equal to 1")
@@ -57,13 +54,10 @@ module Contests
     return PokeAPI::Error.from_response(response)
   end
 
-  # Returns a `PokeAPI::Types::SuperContestEffect` based on the given *identifier*.
-  # The identifier can be either the id or the name of the desired super contest effect.
+  # Returns a `PokeAPI::Types::SuperContestEffect` based on the given *id*.
   # However, if no super contest effect was found a `PokeAPI::Types::Error` is returned.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
+  # An `ArgumentError` is raised if the id is lower than 1
   def super_contest_effect(id : Int32) : PokeAPI::Types::SuperContestEffect | PokeAPI::Types::Error
     if id < 1
       raise ArgumentError.new("id must be greater than or equal to 1")

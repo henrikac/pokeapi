@@ -6,6 +6,7 @@ module PokeAPI
 
   extend Berries
   extend Contests
+  extend Encounters
   extend Pokemon
 
   # Returns a list of items from the given *endpoint*.

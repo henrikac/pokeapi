@@ -24,10 +24,10 @@ TODO: Write a description here
   * [X] Contest Types `/contest-type/{id or name}/`
   * [X] Contest Effects `/contest-effect/{id}/`
   * [X] Super Contest Effects `/super-contest-effect/{id}/`
-* [ ] Encounters
-  * [ ] Encounter Methods
-  * [ ] Encounter Conditions
-  * [ ] Encounter Condition Values
+* [X] Encounters
+  * [X] Encounter Methods `/encounter-method/{id or name}/`
+  * [X] Encounter Conditions `/encounter-condition/{id or name}/`
+  * [X] Encounter Condition Values `/encounter-condition-value/{id or name}/`
 * [ ] Evolution
   * [ ] Evolution Chains
   * [ ] Evolution Triggers

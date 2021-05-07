@@ -20,10 +20,10 @@ TODO: Write a description here
   * [X] Berries `/berry/{id or name}/`
   * [X] Berry Firmnesses `/berry-firmness/{id or name}/`
   * [X] Berry Flavors `/berry-flavor/{id or name}/`
-* [ ] Contests
-  * [ ] Contest Types
-  * [ ] Contest Effects
-  * [ ] Super Contest Effects
+* [X] Contests
+  * [X] Contest Types `/contest-type/{id or name}/`
+  * [X] Contest Effects `/contest-effect/{id}/`
+  * [X] Super Contest Effects `/super-contest-effect/{id}/`
 * [ ] Encounters
   * [ ] Encounter Methods
   * [ ] Encounter Conditions

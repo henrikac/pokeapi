@@ -4,6 +4,8 @@ require "./pokeapi/**"
 module PokeAPI
   VERSION = "0.1.0"
 
+  extend Berries
+  extend Contests
   extend Pokemon
 
   # Returns a list of items from the given *endpoint*.

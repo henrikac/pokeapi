@@ -13,7 +13,7 @@ module Berries
   # An `ArgumentError` is raised if:
   # + the identifier is an empty string
   # + the identifier is an integer AND lower than 1
-  def berries(identifier : String | Int32) : PokeAPI::Types::Berry | PokeAPI::Types::Error
+  def berry(identifier : String | Int32) : PokeAPI::Types::Berry | PokeAPI::Types::Error
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("berry/#{identifier}")

@@ -11,7 +11,7 @@ module PokeAPI
   extend Pokemon
 
   # Returns a list of items from the given *endpoint*.
-  def self.resource(endpoint : String, limit : Int32 = 20, offset : Int32 = 0) : Types::ResourceList | Types::Error
+  def self.resource(endpoint : String, limit : Int32 = 20, offset : Int32 = 0) : Types::ResourceList
     if endpoint.empty?
       raise ArgumentError.new("endpoint is undefined")
     end
@@ -22,10 +22,6 @@ module PokeAPI
       return Types::ResourceList.from_json(response.body)
     end
 
-    error_json = {
-      "status" => response.status_code,
-      "message" => response.status_message
-    }
-    return Types::Error.from_json(error_json.to_json)
+    raise Exception.new("#{response.status_code} - #{response.status_message}")
   end
 end

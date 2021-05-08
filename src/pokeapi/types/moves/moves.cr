@@ -75,6 +75,7 @@ module PokeAPI::Types
     property type : NamedAPIResource?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class ContestComboSets
     include JSON::Serializable
 
@@ -85,6 +86,7 @@ module PokeAPI::Types
     property super : ContestComboDetail?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class ContestComboDetail
     include JSON::Serializable
 
@@ -95,6 +97,7 @@ module PokeAPI::Types
     property use_after : Array(NamedAPIResource)?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class MoveFlavorText
     include JSON::Serializable
 
@@ -108,6 +111,7 @@ module PokeAPI::Types
     property version_group : NamedAPIResource?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class MoveMetaData
     include JSON::Serializable
 
@@ -148,6 +152,7 @@ module PokeAPI::Types
     property stat_chance : Int32?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class MoveStatChange
     include JSON::Serializable
 
@@ -158,6 +163,7 @@ module PokeAPI::Types
     property stat : NamedAPIResource?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class PastMoveStatValues
     include JSON::Serializable
 

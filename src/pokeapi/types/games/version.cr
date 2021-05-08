@@ -1,19 +1,20 @@
 require "json"
 
 module PokeAPI::Types
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class Version
     include JSON::Serializable
 
     @[JSON::Field(key: "id")]
-    property id : Int32
+    property id : Int32?
 
     @[JSON::Field(key: "name")]
     property name : String?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)
+    property names : Array(Name)?
 
     @[JSON::Field(key: "version_group")]
-    property version_group : NamedAPIResource
+    property version_group : NamedAPIResource?
   end
 end

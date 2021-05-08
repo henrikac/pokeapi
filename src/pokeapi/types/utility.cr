@@ -1,17 +1,18 @@
 require "json"
 
 module PokeAPI::Types
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class Language
     include JSON::Serializable
 
     @[JSON::Field(key: "id")]
-    property id : Int32
+    property id : Int32?
 
     @[JSON::Field(key: "name")]
     property name : String?
 
     @[JSON::Field(key: "official")]
-    property official : Bool
+    property official : Bool?
 
     @[JSON::Field(key: "iso639")]
     property iso639 : String?
@@ -20,9 +21,10 @@ module PokeAPI::Types
     property iso3166 : String?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)
+    property names : Array(Name)?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class APIResource
     include JSON::Serializable
 
@@ -30,6 +32,7 @@ module PokeAPI::Types
     property url : String?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class Description
     include JSON::Serializable
 
@@ -37,9 +40,10 @@ module PokeAPI::Types
     property description : String?
 
     @[JSON::Field(key: "language")]
-    property language : NamedAPIResource
+    property language : NamedAPIResource?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class Effect
     include JSON::Serializable
 
@@ -47,22 +51,24 @@ module PokeAPI::Types
     property effect : String?
 
     @[JSON::Field(key: "language")]
-    property language : NamedAPIResource
+    property language : NamedAPIResource?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class Encounter
     include JSON::Serializable
     
     @[JSON::Field(key: "min_level")]
-    property min_level : Int32
+    property min_level : Int32?
 
     @[JSON::Field(key: "max_level")]
-    property max_level : Int32 
+    property max_level : Int32?
 
     @[JSON::Field(key: "condition_values")]
-    property condition_values : Array(NamedAPIResource)
+    property condition_values : Array(NamedAPIResource)?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class FlavorText
     include JSON::Serializable
 
@@ -70,32 +76,35 @@ module PokeAPI::Types
     property flavor_text : String?
 
     @[JSON::Field(key: "language")]
-    property language : NamedAPIResource
+    property language : NamedAPIResource?
 
     @[JSON::Field(key: "version")]
-    property version : NamedAPIResource
+    property version : NamedAPIResource?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class GenerationGameIndex
     include JSON::Serializable
 
     @[JSON::Field(key: "game_index")]
-    property game_index : Int32
+    property game_index : Int32?
 
     @[JSON::Field(key: "generation")]
-    property generation : NamedAPIResource
+    property generation : NamedAPIResource?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class MachineVersionDetail
     include JSON::Serializable
 
     @[JSON::Field(key: "machine")]
-    property machine : APIResource
+    property machine : APIResource?
 
     @[JSON::Field(key: "version_group")]
-    property version_group : NamedAPIResource
+    property version_group : NamedAPIResource?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class Name
     include JSON::Serializable
 
@@ -103,9 +112,10 @@ module PokeAPI::Types
     property name : String?
 
     @[JSON::Field(key: "language")]
-    property language : NamedAPIResource
+    property language : NamedAPIResource?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class NamedAPIResource
     include JSON::Serializable
 
@@ -116,6 +126,7 @@ module PokeAPI::Types
     property url : String?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class VerboseEffect
     include JSON::Serializable
 
@@ -126,32 +137,35 @@ module PokeAPI::Types
     property short_effect : String?
 
     @[JSON::Field(key: "language")]
-    property language : NamedAPIResource
+    property language : NamedAPIResource?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class VersionEncounterDetail
     include JSON::Serializable
 
     @[JSON::Field(key: "version")]
-    property version : NamedAPIResource
+    property version : NamedAPIResource?
 
     @[JSON::Field(key: "max_chance")]
-    property max_chance : Int32
+    property max_chance : Int32?
 
     @[JSON::Field(key: "encounter_details")]
-    property encounter_details : Array(Encounter)
+    property encounter_details : Array(Encounter)?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class VersionGameIndex
     include JSON::Serializable
 
     @[JSON::Field(key: "game_index")]
-    property game_index : Int32
+    property game_index : Int32?
 
     @[JSON::Field(key: "version")]
-    property version : NamedAPIResource
+    property version : NamedAPIResource?
   end
 
+  @[JSON::Serializable::Options(emit_nulls: true)]
   class VersionGroupFlavorText
     include JSON::Serializable
 
@@ -159,9 +173,9 @@ module PokeAPI::Types
     property text : String?
 
     @[JSON::Field(key: "language")]
-    property language : NamedAPIResource
+    property language : NamedAPIResource?
 
     @[JSON::Field(key: "version_group")]
-    property version_group : NamedAPIResource
+    property version_group : NamedAPIResource?
   end
 end

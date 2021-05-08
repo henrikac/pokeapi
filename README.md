@@ -31,11 +31,11 @@ TODO: Write a description here
 * [X] Evolution
   * [X] Evolution Chains `/evolution-chain/{id}/`
   * [X] Evolution Triggers `/evolution-trigger/{id or name}/`
-* [ ] Games
-  * [ ] Generations
-  * [ ] Pokedexes
-  * [ ] Version
-  * [ ] Version Groups
+* [X] Games
+  * [X] Generations `/generation/{id or name}/`
+  * [X] Pokedexes `/pokedex/{id or name}/`
+  * [X] Version `/version/{id or name}/`
+  * [X] Version Groups `/version-group/{id or name}/`
 * [ ] Items
   * [ ] Item
   * [ ] Item Attributes

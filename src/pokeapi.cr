@@ -8,6 +8,7 @@ module PokeAPI
   extend Contests
   extend Encounters
   extend Evolution
+  extend Games
   extend Pokemon
 
   # Returns a list of items from the given *endpoint*.

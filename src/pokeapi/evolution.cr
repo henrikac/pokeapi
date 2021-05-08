@@ -8,10 +8,10 @@ require "./types/pokemon/**"
 module Evolution
   # Returns a `PokeAPI::Types::EvolutionChain` based on the given *id*.
   #
-  # An `ArgumentError` is raised if the id is lower than 1
-  def evolution_chain(id : Int32) : PokeAPI::Types::EvolutionChain
+  # An `ArgumentError` is raised if the id is 0
+  def evolution_chain(id : UInt32) : PokeAPI::Types::EvolutionChain
     if id < 1
-      raise ArgumentError.new("id must be greater than or equal to 1")
+      raise ArgumentError.new("id must be greater than 0")
     end
 
     response = PokeAPI::Client.get("evolution-chain/#{id}")
@@ -37,10 +37,8 @@ module Evolution
   # |  5 | other    |
   # +----+----------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def evolution_trigger(identifier : String | Int32) : PokeAPI::Types::EvolutionTrigger
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def evolution_trigger(identifier : String | UInt32) : PokeAPI::Types::EvolutionTrigger
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("evolution-trigger/#{identifier}")

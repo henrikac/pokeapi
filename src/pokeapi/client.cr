@@ -14,17 +14,13 @@ class PokeAPI::Client
   end
 
   # Requests `pokeapi.co` for *limit* items at the given *path*.
-  def self.get(path : String, limit : Int32, offset : Int32) : HTTP::Client::Response
+  def self.get(path : String, limit : UInt32, offset : UInt32) : HTTP::Client::Response
     if path.empty?
       raise ArgumentError.new("path is undefined")
     end
 
-    if limit < 1
-      raise ArgumentError.new("limit must be greater than or equal to 1")
-    end
-
-    if offset < 0
-      raise ArgumentError.new("offset must be greater than or equal to 0")
+    if limit == 0
+      raise ArgumentError.new("limit must be greater than 0")
     end
 
     path = path.strip(" /")

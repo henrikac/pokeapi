@@ -9,10 +9,8 @@ module Pokemon
   # Returns a `PokeAPI::Types::Ability` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired ability.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def ability(identifier : String | Int32) : PokeAPI::Types::Ability
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def ability(identifier : String | UInt32) : PokeAPI::Types::Ability
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("ability/#{identifier}")
@@ -26,10 +24,10 @@ module Pokemon
 
   # Returns a `PokeAPI::Types::Characteristic` based on the given *id*.
   #
-  # An `ArgumentError` is raised if the id is lower than 1
-  def characteristic(id : Int32) : PokeAPI::Types::Characteristic
+  # An `ArgumentError` is raised if the id is 0
+  def characteristic(id : UInt32) : PokeAPI::Types::Characteristic
     if id < 1
-      raise ArgumentError.new("id must be greater than or equal to 1")
+      raise ArgumentError.new("id must be greater than 0")
     end
 
     response = PokeAPI::Client.get("characteristic/#{id}")
@@ -44,10 +42,8 @@ module Pokemon
   # Returns a `PokeAPI::Types::EggGroup` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired egg group.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def egg_group(identifier : String | Int32) : PokeAPI::Types::EggGroup
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def egg_group(identifier : String | UInt32) : PokeAPI::Types::EggGroup
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("egg-group/#{identifier}")
@@ -71,10 +67,8 @@ module Pokemon
   # |  3 | genderless |
   # +----+------------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def gender(identifier : String | Int32) : PokeAPI::Types::Gender
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def gender(identifier : String | UInt32) : PokeAPI::Types::Gender
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("gender/#{identifier}")
@@ -101,10 +95,8 @@ module Pokemon
   # |  6 | fast-then-very-slow |
   # +----+---------------------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def growth_rate(identifier : String | Int32) : PokeAPI::Types::GrowthRate
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def growth_rate(identifier : String | UInt32) : PokeAPI::Types::GrowthRate
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("growth-rate/#{identifier}")
@@ -119,10 +111,8 @@ module Pokemon
   # Returns a `PokeAPI::Types::Nature` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired nature.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def nature(identifier : String | Int32) : PokeAPI::Types::Nature
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def nature(identifier : String | UInt32) : PokeAPI::Types::Nature
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("nature/#{identifier}")
@@ -148,10 +138,8 @@ module Pokemon
   # |  5 | jump    |
   # +----+---------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def pokeathlon_stat(identifier : String | Int32) : PokeAPI::Types::PokeathlonStat
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def pokeathlon_stat(identifier : String | UInt32) : PokeAPI::Types::PokeathlonStat
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("pokeathlon-stat/#{identifier}")
@@ -166,10 +154,8 @@ module Pokemon
   # Returns a `PokeAPI::Types::Pokemon` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired pokémon.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def pokemon(identifier : String | Int32) : PokeAPI::Types::Pokemon
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def pokemon(identifier : String | UInt32) : PokeAPI::Types::Pokemon
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("pokemon/#{identifier}")
@@ -184,14 +170,8 @@ module Pokemon
   # Returns a `PokeAPI::Types::LocationAreaEncounter` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired pokémon.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def pokemon_location_area(identifier : String | Int32) : PokeAPI::Types::LocationAreaEncounter
-    if identifier.is_a?(String) && identifier.empty?
-      raise ArgumentError.new("identifier (name) is undefined")
-    end
-
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def pokemon_location_area(identifier : String | UInt32) : PokeAPI::Types::LocationAreaEncounter
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("pokemon/#{identifier}/encounters")
@@ -222,10 +202,8 @@ module Pokemon
   # | 10 | yellow |
   # +----+--------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def pokemon_color(identifier : String | Int32) : PokeAPI::Types::PokemonColor
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def pokemon_color(identifier : String | UInt32) : PokeAPI::Types::PokemonColor
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("pokemon-color/#{identifier}")
@@ -240,10 +218,8 @@ module Pokemon
   # Returns a `PokeAPI::Types::PokemonForm` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired pokémon form.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def pokemon_form(identifier : String | Int32) : PokeAPI::Types::PokemonForm
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def pokemon_form(identifier : String | UInt32) : PokeAPI::Types::PokemonForm
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("pokemon-form/#{identifier}")
@@ -273,10 +249,8 @@ module Pokemon
   # |  9 | waters-edge   |
   # +----+---------------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def pokemon_habitat(identifier : String | Int32) : PokeAPI::Types::PokemonHabitat
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def pokemon_habitat(identifier : String | UInt32) : PokeAPI::Types::PokemonHabitat
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("pokemon-habitat/#{identifier}")
@@ -311,10 +285,8 @@ module Pokemon
   # | 14 | armor     |
   # +----+-----------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def pokemon_shape(identifier : String | Int32) : PokeAPI::Types::PokemonShape
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def pokemon_shape(identifier : String | UInt32) : PokeAPI::Types::PokemonShape
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("pokemon-shape/#{identifier}")
@@ -329,10 +301,8 @@ module Pokemon
   # Returns a `PokeAPI::Types::PokemonSpecies` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired pokémon species.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def pokemon_species(identifier : String | Int32) : PokeAPI::Types::PokemonSpecies
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def pokemon_species(identifier : String | UInt32) : PokeAPI::Types::PokemonSpecies
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("pokemon-species/#{identifier}")
@@ -361,10 +331,8 @@ module Pokemon
   # |  8 | evasion         |
   # +----+-----------------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def stat(identifier : String | Int32) : PokeAPI::Types::Stat
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def stat(identifier : String | UInt32) : PokeAPI::Types::Stat
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("stat/#{identifier}")
@@ -379,10 +347,8 @@ module Pokemon
   # Returns a `PokeAPI::Types::Type` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired pokémon type.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def type(identifier : String | Int32) : PokeAPI::Types::Type
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def type(identifier : String | UInt32) : PokeAPI::Types::Type
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("type/#{identifier}")

@@ -9,10 +9,8 @@ module Berries
   # Returns a `PokeAPI::Types::Berry` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired berry.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def berry(identifier : String | Int32) : PokeAPI::Types::Berry
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def berry(identifier : String | UInt32) : PokeAPI::Types::Berry
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("berry/#{identifier}")
@@ -38,10 +36,8 @@ module Berries
   # |  5 | super-hard |
   # +----+------------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def berry_firmness(identifier : String | Int32) : PokeAPI::Types::BerryFirmness
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def berry_firmness(identifier : String | UInt32) : PokeAPI::Types::BerryFirmness
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("berry-firmness/#{identifier}")
@@ -67,10 +63,8 @@ module Berries
   # |  5 | sour   |
   # +----+--------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def berry_flavor(identifier : String | Int32) : PokeAPI::Types::BerryFlavor
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def berry_flavor(identifier : String | UInt32) : PokeAPI::Types::BerryFlavor
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("berry-flavor/#{identifier}")

@@ -9,10 +9,8 @@ module Moves
   # Returns a `PokeAPI::Types::Move` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired move.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def move(identifier : String | Int32) : PokeAPI::Types::Move
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def move(identifier : String | UInt32) : PokeAPI::Types::Move
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("move/#{identifier}")
@@ -29,9 +27,13 @@ module Moves
   #
   # An `ArgumentError` is raised if:
   # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
+  # + the identifier is an integer AND lower than -1
   def move_ailment(identifier : String | Int32) : PokeAPI::Types::MoveAilment
-    identifier = PokeAPI::Validator.validate_identifier(identifier)
+    if identifier.is_a?(String) && identifier.empty?
+      raise ArgumentError.new("identifier is undefined")
+    elsif identifier.is_a?(Int32) && identifier < -1
+      raise ArgumentError.new("idenfifier must be greater than or equal to -1")
+    end
 
     response = PokeAPI::Client.get("move-ailment/#{identifier}")
 
@@ -54,10 +56,8 @@ module Moves
   # |  3 | support |
   # +----+---------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def move_battle_style(identifier : String | Int32) : PokeAPI::Types::MoveBattleStyle
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def move_battle_style(identifier : String | UInt32) : PokeAPI::Types::MoveBattleStyle
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("move-battle-style/#{identifier}")
@@ -119,10 +119,8 @@ module Moves
   # |  3 | special  |
   # +----+----------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def move_damage_class(identifier : String | Int32) : PokeAPI::Types::MoveDamageClass
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def move_damage_class(identifier : String | UInt32) : PokeAPI::Types::MoveDamageClass
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("move-damage-class/#{identifier}")
@@ -153,10 +151,8 @@ module Moves
   # | 10 | form-change              |
   # +----+--------------------------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def move_learn_method(identifier : String | Int32) : PokeAPI::Types::MoveLearnMethod
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def move_learn_method(identifier : String | UInt32) : PokeAPI::Types::MoveLearnMethod
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("move-learn-method/#{identifier}")
@@ -171,10 +167,8 @@ module Moves
   # Returns a `PokeAPI::Types::MoveTarget` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired move target.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def move_target(identifier : String | Int32) : PokeAPI::Types::MoveTarget
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def move_target(identifier : String | UInt32) : PokeAPI::Types::MoveTarget
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("move-target/#{identifier}")

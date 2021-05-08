@@ -8,10 +8,10 @@ require "./types/pokemon/**"
 module Machines
   # Returns a `PokeAPI::Types::Machine` based on the given *id*.
   #
-  # An `ArgumentError` is raised if the id is lower than 1
-  def machine(id : Int32) : PokeAPI::Types::Machine
+  # An `ArgumentError` is raised if the id is 0
+  def machine(id : UInt32) : PokeAPI::Types::Machine
     if id < 1
-      raise ArgumentError.new("id must be greater than or equal to 1")
+      raise ArgumentError.new("id must be greater than 0")
     end
 
     response = PokeAPI::Client.get("machine/#{id}")

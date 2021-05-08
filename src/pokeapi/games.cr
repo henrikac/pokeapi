@@ -23,10 +23,8 @@ module Games
   # |  8 | generation-viii |
   # +----+-----------------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def generation(identifier : String | Int32) : PokeAPI::Types::Generation
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def generation(identifier : String | UInt32) : PokeAPI::Types::Generation
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("generation/#{identifier}")
@@ -41,10 +39,8 @@ module Games
   # Returns a `PokeAPI::Types::Pokedex` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired pokedex.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def pokedex(identifier : String | Int32) : PokeAPI::Types::Pokedex
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def pokedex(identifier : String | UInt32) : PokeAPI::Types::Pokedex
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("pokedex/#{identifier}")
@@ -59,10 +55,8 @@ module Games
   # Returns a `PokeAPI::Types::Version` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired version.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def version(identifier : String | Int32) : PokeAPI::Types::Version
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def version(identifier : String | UInt32) : PokeAPI::Types::Version
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("version/#{identifier}")
@@ -77,10 +71,8 @@ module Games
   # Returns a `PokeAPI::Types::VersionGroup` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired version group.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def version_group(identifier : String | Int32) : PokeAPI::Types::VersionGroup
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def version_group(identifier : String | UInt32) : PokeAPI::Types::VersionGroup
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("version-group/#{identifier}")

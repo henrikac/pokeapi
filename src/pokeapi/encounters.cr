@@ -9,10 +9,8 @@ module Encounters
   # Returns a `PokeAPI::Types::EncounterMethod` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired encounter method.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def encounter_method(identifier : String | Int32) : PokeAPI::Types::EncounterMethod
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def encounter_method(identifier : String | UInt32) : PokeAPI::Types::EncounterMethod
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("encounter-method/#{identifier}")
@@ -43,10 +41,8 @@ module Encounters
   # | 10 | other          |
   # +----+----------------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def encounter_condition(identifier : String | Int32) : PokeAPI::Types::EncounterCondition
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def encounter_condition(identifier : String | UInt32) : PokeAPI::Types::EncounterCondition
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("encounter-condition/#{identifier}")
@@ -61,10 +57,8 @@ module Encounters
   # Returns a `PokeAPI::Types::EncounterConditionValue` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired encounter condition value.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def encounter_condition_value(identifier : String | Int32) : PokeAPI::Types::EncounterConditionValue
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def encounter_condition_value(identifier : String | UInt32) : PokeAPI::Types::EncounterConditionValue
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("encounter-condition-value/#{identifier}")

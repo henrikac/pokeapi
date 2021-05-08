@@ -9,10 +9,8 @@ module Items
   # Returns a `PokeAPI::Types::Item` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired item.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def item(identifier : String | Int32) : PokeAPI::Types::Item
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def item(identifier : String | UInt32) : PokeAPI::Types::Item
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("item/#{identifier}")
@@ -41,10 +39,8 @@ module Items
   # |  8 | underground      |
   # +----+------------------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def item_attribute(identifier : String | Int32) : PokeAPI::Types::ItemAttribute
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def item_attribute(identifier : String | UInt32) : PokeAPI::Types::ItemAttribute
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("item-attribute/#{identifier}")
@@ -59,10 +55,8 @@ module Items
   # Returns a `PokeAPI::Types::ItemCategory` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired item category.
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def item_category(identifier : String | Int32) : PokeAPI::Types::ItemCategory
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def item_category(identifier : String | UInt32) : PokeAPI::Types::ItemCategory
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("item-category/#{identifier}")
@@ -90,10 +84,8 @@ module Items
   # |  7 | flinch       |
   # +----+--------------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def item_fling_effect(identifier : String | Int32) : PokeAPI::Types::ItemFlingEffect
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def item_fling_effect(identifier : String | UInt32) : PokeAPI::Types::ItemFlingEffect
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("item-fling-effect/#{identifier}")
@@ -122,10 +114,8 @@ module Items
   # |  8 | key       |
   # +----+-----------+
   #
-  # An `ArgumentError` is raised if:
-  # + the identifier is an empty string
-  # + the identifier is an integer AND lower than 1
-  def item_pocket(identifier : String | Int32) : PokeAPI::Types::ItemPocket
+  # An `ArgumentError` is raised if the identifier is an empty string or 0
+  def item_pocket(identifier : String | UInt32) : PokeAPI::Types::ItemPocket
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("item-pocket/#{identifier}")

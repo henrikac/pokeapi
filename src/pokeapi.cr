@@ -16,7 +16,7 @@ module PokeAPI
   extend Pokemon
 
   # Returns a list of items from the given *endpoint*.
-  def self.resource(endpoint : String, limit : Int32 = 20, offset : Int32 = 0) : Types::ResourceList
+  def self.resource(endpoint : String, limit : UInt32 = 20, offset : UInt32 = 0) : Types::ResourceList
     if endpoint.empty?
       raise ArgumentError.new("endpoint is undefined")
     end

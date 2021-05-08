@@ -36,12 +36,12 @@ TODO: Write a description here
   * [X] Pokedexes `/pokedex/{id or name}/`
   * [X] Version `/version/{id or name}/`
   * [X] Version Groups `/version-group/{id or name}/`
-* [ ] Items
-  * [ ] Item
-  * [ ] Item Attributes
-  * [ ] Item Categories
-  * [ ] Item Fling Effects
-  * [ ] Item Pockets
+* [X] Items
+  * [X] Item `/item/{id or name}/`
+  * [X] Item Attributes `/item-attribute/{id or name}/`
+  * [X] Item Categories `/item-category/{id or name}/`
+  * [X] Item Fling Effects `/item-fling-effect/{id or name}/`
+  * [X] Item Pockets `/item-pocket/{id or name}/`
 * [ ] Locations
   * [ ] Locations
   * [ ] Location Areas

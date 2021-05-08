@@ -86,6 +86,16 @@ module PokeAPI::Types
     property generation : NamedAPIResource
   end
 
+  class MachineVersionDetail
+    include JSON::Serializable
+
+    @[JSON::Field(key: "machine")]
+    property machine : APIResource
+
+    @[JSON::Field(key: "version_group")]
+    property version_group : NamedAPIResource
+  end
+
   class Name
     include JSON::Serializable
 
@@ -140,5 +150,18 @@ module PokeAPI::Types
 
     @[JSON::Field(key: "version")]
     property version : NamedAPIResource
+  end
+
+  class VersionGroupFlavorText
+    include JSON::Serializable
+
+    @[JSON::Field(key: "text")]
+    property text : String?
+
+    @[JSON::Field(key: "language")]
+    property language : NamedAPIResource
+
+    @[JSON::Field(key: "version_group")]
+    property version_group : NamedAPIResource
   end
 end

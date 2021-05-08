@@ -11,6 +11,7 @@ module PokeAPI
   extend Games
   extend Items
   extend Locations
+  extend Machines
   extend Pokemon
 
   # Returns a list of items from the given *endpoint*.

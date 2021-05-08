@@ -47,8 +47,8 @@ TODO: Write a description here
   * [X] Location Areas `/location-area/{id or name}/`
   * [X] Pal Park Areas `/pal-park-area/{id or name}/`
   * [X] Regions `/region/{id or name}/`
-* [ ] Machines
-  * [ ] Machines
+* [X] Machines
+  * [X] Machines `/machine/{id}/`
 * [ ] Moves
   * [ ] Moves
   * [ ] Move Allments

@@ -10,6 +10,7 @@ module PokeAPI
   extend Evolution
   extend Games
   extend Items
+  extend Locations
   extend Pokemon
 
   # Returns a list of items from the given *endpoint*.

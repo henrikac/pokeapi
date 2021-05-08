@@ -42,11 +42,11 @@ TODO: Write a description here
   * [X] Item Categories `/item-category/{id or name}/`
   * [X] Item Fling Effects `/item-fling-effect/{id or name}/`
   * [X] Item Pockets `/item-pocket/{id or name}/`
-* [ ] Locations
-  * [ ] Locations
-  * [ ] Location Areas
-  * [ ] Pal Park Areas
-  * [ ] Regions
+* [X] Locations
+  * [X] Locations `/location/{id or name}/`
+  * [X] Location Areas `/location-area/{id or name}/`
+  * [X] Pal Park Areas `/pal-park-area/{id or name}/`
+  * [X] Regions `/region/{id or name}/`
 * [ ] Machines
   * [ ] Machines
 * [ ] Moves

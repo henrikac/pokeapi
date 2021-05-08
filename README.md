@@ -8,7 +8,7 @@ Crystal wrapper library for [PokéAPI](https://pokeapi.co/docs/v2).
 
    ```yaml
    dependencies:
-     pokemoncr:
+     pokeapi:
        github: henrikac/pokeapi
    ```
 

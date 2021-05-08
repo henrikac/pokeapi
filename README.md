@@ -1,6 +1,6 @@
 # PokeAPI
 
-TODO: Write a description here
+Crystal wrapper library for [PokéAPI](https://pokeapi.co/docs/v2).
 
 ## Installation
 
@@ -14,79 +14,109 @@ TODO: Write a description here
 
 2. Run `shards install`
 
-## Supported Endpoints
+## Endpoints
 
-* [X] Berries
-  * [X] Berries `/berry/{id or name}/`
-  * [X] Berry Firmnesses `/berry-firmness/{id or name}/`
-  * [X] Berry Flavors `/berry-flavor/{id or name}/`
-* [X] Contests
-  * [X] Contest Types `/contest-type/{id or name}/`
-  * [X] Contest Effects `/contest-effect/{id}/`
-  * [X] Super Contest Effects `/super-contest-effect/{id}/`
-* [X] Encounters
-  * [X] Encounter Methods `/encounter-method/{id or name}/`
-  * [X] Encounter Conditions `/encounter-condition/{id or name}/`
-  * [X] Encounter Condition Values `/encounter-condition-value/{id or name}/`
-* [X] Evolution
-  * [X] Evolution Chains `/evolution-chain/{id}/`
-  * [X] Evolution Triggers `/evolution-trigger/{id or name}/`
-* [X] Games
-  * [X] Generations `/generation/{id or name}/`
-  * [X] Pokedexes `/pokedex/{id or name}/`
-  * [X] Version `/version/{id or name}/`
-  * [X] Version Groups `/version-group/{id or name}/`
-* [X] Items
-  * [X] Item `/item/{id or name}/`
-  * [X] Item Attributes `/item-attribute/{id or name}/`
-  * [X] Item Categories `/item-category/{id or name}/`
-  * [X] Item Fling Effects `/item-fling-effect/{id or name}/`
-  * [X] Item Pockets `/item-pocket/{id or name}/`
-* [X] Locations
-  * [X] Locations `/location/{id or name}/`
-  * [X] Location Areas `/location-area/{id or name}/`
-  * [X] Pal Park Areas `/pal-park-area/{id or name}/`
-  * [X] Regions `/region/{id or name}/`
-* [X] Machines
-  * [X] Machines `/machine/{id}/`
-* [X] Moves
-  * [X] Moves `/move/{id or name}/`
-  * [X] Move Allments `/move-ailment/{id or name}/`
-  * [X] Move Battle Styles `/move-battle-style/{id or name}/`
-  * [X] Move Categories `/move-category/{id or name}/`
-  * [X] Move Damage Classes `/move-damage-class/{id or name}/`
-  * [X] Move Learn Methods `/move-learn-method/{id or name}/`
-  * [X] Move Targets `/move-target/{id or name}/`
-* [X] Pokémon
-  * [X] Abilities `/ability/{id or name}/`
-  * [X] Characteristics `/characteristic/{id}/`
-  * [X] Egg Groups `/egg-group/{id or name}/`
-  * [X] Genders `/gender/{id or name}/`
-  * [X] Growth Rates `/growth-rate/{id or name}/`
-  * [X] Natures `/nature/{id or name}/`
-  * [X] Pokeathlon Stats `/pokeathlon-stat/{id or name}/`
-  * [X] Pokemon `/pokemon/{id or name}/`
-  * [X] Pokemon Location Areas `/pokemon/{id or name}/encounters/`
-  * [X] Pokemon Colors `/pokemon-color/{id or name}/`
-  * [X] Pokemon Forms `/pokemon-form/{id or name}/`
-  * [X] Pokemon Habitats `/pokemon-habitat/{id or name}/`
-  * [X] Pokemon Shapes `/pokemon-shape/{id or name}/`
-  * [X] Pokemon Species `/pokemon-species/{id or name}/`
-  * [X] Stats `/stat/{id or name}/`
-  * [X] Types `/type/{id or name}/`
-
+### Berries
+<details>
+  <summary>Berries</summary>
+  #### Berries `/berry/{id or name}/`
+  #### Berry Firmnesses `/berry-firmness/{id or name}/`
+  #### Berry Flavors `/berry-flavor/{id or name}/`
+</details>
+<details>
+  <summary>Contests</summary>
+  #### Contest Types `/contest-type/{id or name}/`
+  #### Contest Effects `/contest-effect/{id}/`
+  #### Super Contest Effects `/super-contest-effect/{id}/`
+</details>
+<details>
+  <summary>Encounters</summary>
+  #### Encounter Methods `/encounter-method/{id or name}/`
+  #### Encounter Conditions `/encounter-condition/{id or name}/`
+  #### Encounter Condition Values `/encounter-condition-value/{id or name}/`
+</details>
+<details>
+  <summary>Evolution</summary>
+  #### Evolution Chains `/evolution-chain/{id}/`
+  #### Evolution Triggers `/evolution-trigger/{id or name}/`
+</details>
+<details>
+  <summary>Games</summary>
+  #### Generations `/generation/{id or name}/`
+  #### Pokedexes `/pokedex/{id or name}/`
+  #### Version `/version/{id or name}/`
+  #### Version Groups `/version-group/{id or name}/`
+</details>
+<details>
+  <summary>Items</summary>
+  #### Item `/item/{id or name}/`
+  #### Item Attributes `/item-attribute/{id or name}/`
+  #### Item Categories `/item-category/{id or name}/`
+  #### Item Fling Effects `/item-fling-effect/{id or name}/`
+  #### Item Pockets `/item-pocket/{id or name}/`
+</details>
+<details>
+  <summary>Locations</summary>
+  #### Locations `/location/{id or name}/`
+  #### Location Areas `/location-area/{id or name}/`
+  #### Pal Park Areas `/pal-park-area/{id or name}/`
+  #### Regions `/region/{id or name}/`
+</details>
+<details>
+  <summary>Machines</summary>
+  #### Machines `/machine/{id}/`
+</details>
+<details>
+  <summary>Moves</summary>
+  #### Moves `/move/{id or name}/`
+  #### Move Allments `/move-ailment/{id or name}/`
+  #### Move Battle Styles `/move-battle-style/{id or name}/`
+  #### Move Categories `/move-category/{id or name}/`
+  #### Move Damage Classes `/move-damage-class/{id or name}/`
+  #### Move Learn Methods `/move-learn-method/{id or name}/`
+  #### Move Targets `/move-target/{id or name}/`
+</details>
+<details>
+  <summary>Pokémon</summary>
+  #### Abilities `/ability/{id or name}/`
+  #### Characteristics `/characteristic/{id}/`
+  #### Egg Groups `/egg-group/{id or name}/`
+  #### Genders `/gender/{id or name}/`
+  #### Growth Rates `/growth-rate/{id or name}/`
+  #### Natures `/nature/{id or name}/`
+  #### Pokeathlon Stats `/pokeathlon-stat/{id or name}/`
+  #### Pokemon `/pokemon/{id or name}/`
+  #### Pokemon Location Areas `/pokemon/{id or name}/encounters/`
+  #### Pokemon Colors `/pokemon-color/{id or name}/`
+  #### Pokemon Forms `/pokemon-form/{id or name}/`
+  #### Pokemon Habitats `/pokemon-habitat/{id or name}/`
+  #### Pokemon Shapes `/pokemon-shape/{id or name}/`
+  #### Pokemon Species `/pokemon-species/{id or name}/`
+  #### Stats `/stat/{id or name}/`
+  #### Types `/type/{id or name}/`
+</details>
 
 ## Usage
 
+#### Get a list of resources
+
+To get a list of resources from any of the endpoints specified above use  
+
+`.resource(endpoint : String, limit : UInt32 = 20, offset : UInt32 = 0)`
+
 ```crystal
 require "pokeapi"
+
+# returns a list of the first 20 pokémons
+pokemons = PokeAPI.resource("pokemon")
+
+# returns a list of 8 pokémons starting from #90 (if possible)
+pokemons = PokeAPI.resource("pokemon", limit: 8, offset: 90)
 ```
 
-TODO: Write usage instructions here
+#### Get a single item
 
-## Development
-
-TODO: Write development instructions here
+Each of the endpoints has a corresponding method that can be used to get data from that specific endpoint, e.g. `.pokemon(identifier : String | UInt32)` for `/pokemon/{id or name}/`, `.growth_rate(identifier : String | UInt32)` for `/growth-rate/{id or name}/` and `.super_contest_effect(id : UInt32)` for `/super-contest-effect/{id}/`.
 
 ## Contributing
 

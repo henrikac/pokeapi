@@ -49,14 +49,14 @@ TODO: Write a description here
   * [X] Regions `/region/{id or name}/`
 * [X] Machines
   * [X] Machines `/machine/{id}/`
-* [ ] Moves
-  * [ ] Moves
-  * [ ] Move Allments
-  * [ ] Move Battle Styles
-  * [ ] Move Categories
-  * [ ] Move Damage Classes
-  * [ ] Move Learn Methods
-  * [ ] Move Targets
+* [X] Moves
+  * [X] Moves `/move/{id or name}/`
+  * [X] Move Allments `/move-ailment/{id or name}/`
+  * [X] Move Battle Styles `/move-battle-style/{id or name}/`
+  * [X] Move Categories `/move-category/{id or name}/`
+  * [X] Move Damage Classes `/move-damage-class/{id or name}/`
+  * [X] Move Learn Methods `/move-learn-method/{id or name}/`
+  * [X] Move Targets `/move-target/{id or name}/`
 * [X] Pokémon
   * [X] Abilities `/ability/{id or name}/`
   * [X] Characteristics `/characteristic/{id}/`

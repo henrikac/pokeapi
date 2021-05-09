@@ -1,11 +1,11 @@
 require "./client"
 require "./types/pokemon/**"
 
-# The `Evolution` module contains methods to get data from the different
+# The `PokeAPI::Evolution` module contains methods to get data from the different
 # endpoints in the Evolution group.
 #
 # NOTE: see https://pokeapi.co/docs/v2#evolution-section
-module Evolution
+module PokeAPI::Evolution
   # Returns a `PokeAPI::Types::EvolutionChain` based on the given *id*.
   #
   # An `ArgumentError` is raised if the id is 0

@@ -1,11 +1,11 @@
 require "./client"
 require "./types/pokemon/**"
 
-# The `Locations` module contains methods to get data from the different
+# The `PokeAPI::Locations` module contains methods to get data from the different
 # endpoints in the Locations group.
 #
 # NOTE: see https://pokeapi.co/docs/v2#locations-section
-module Locations
+module PokeAPI::Locations
   # Returns a `PokeAPI::Types::Location` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired location.
   #

@@ -1,11 +1,11 @@
 require "./client"
 require "./types/pokemon/**"
 
-# The `Berries` module contains methods to get data from the different
+# The `PokeAPI::Berries` module contains methods to get data from the different
 # endpoints in the Berries group.
 #
 # NOTE: see https://pokeapi.co/docs/v2#berries-section
-module Berries
+module PokeAPI::Berries
   # Returns a `PokeAPI::Types::Berry` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired berry.
   #

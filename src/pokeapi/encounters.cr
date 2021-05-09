@@ -1,11 +1,11 @@
 require "./client"
 require "./types/pokemon/**"
 
-# The `Encounters` module contains methods to get data from the different
+# The `PokeAPI::Encounters` module contains methods to get data from the different
 # endpoints in the Encounters group.
 #
 # NOTE: see https://pokeapi.co/docs/v2#encounters-section
-module Encounters
+module PokeAPI::Encounters
   # Returns a `PokeAPI::Types::EncounterMethod` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired encounter method.
   #

@@ -1,11 +1,11 @@
 require "./client"
 require "./types/pokemon/**"
 
-# The `Games` module contains methods to get data from the different
+# The `PokeAPI::Games` module contains methods to get data from the different
 # endpoints in the Games group.
 #
 # NOTE: see https://pokeapi.co/docs/v2#games-section
-module Games
+module PokeAPI::Games
   # Returns a `PokeAPI::Types::Generation` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired generation.
   #

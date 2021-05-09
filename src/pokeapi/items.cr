@@ -1,11 +1,11 @@
 require "./client"
 require "./types/pokemon/**"
 
-# The `Items` module contains methods to get data from the different
+# The `PokeAPI::Items` module contains methods to get data from the different
 # endpoints in the Items group.
 #
 # NOTE: see https://pokeapi.co/docs/v2#items-section
-module Items
+module PokeAPI::Items
   # Returns a `PokeAPI::Types::Item` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired item.
   #

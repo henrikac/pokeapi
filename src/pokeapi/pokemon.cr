@@ -1,11 +1,11 @@
 require "./client"
 require "./types/pokemon/**"
 
-# The `Pokemon` module contains methods to get data from the different
+# The `PokeAPI::Pokemon` module contains methods to get data from the different
 # endpoints in the Pokémon group.
 #
 # NOTE: see https://pokeapi.co/docs/v2#pokemon-section
-module Pokemon
+module PokeAPI::Pokemon
   # Returns a `PokeAPI::Types::Ability` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired ability.
   #

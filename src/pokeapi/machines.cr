@@ -1,11 +1,11 @@
 require "./client"
 require "./types/pokemon/**"
 
-# The `Machines` module contains methods to get data from the different
+# The `PokeAPI::Machines` module contains methods to get data from the different
 # endpoints in the Machines group.
 #
 # NOTE: see https://pokeapi.co/docs/v2#machines-section
-module Machines
+module PokeAPI::Machines
   # Returns a `PokeAPI::Types::Machine` based on the given *id*.
   #
   # An `ArgumentError` is raised if the id is 0

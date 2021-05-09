@@ -1,11 +1,11 @@
 require "./client"
 require "./types/pokemon/**"
 
-# The `Moves` module contains methods to get data from the different
+# The `PokeAPI::Moves` module contains methods to get data from the different
 # endpoints in the Moves group.
 #
 # NOTE: see https://pokeapi.co/docs/v2#moves-section
-module Moves
+module PokeAPI::Moves
   # Returns a `PokeAPI::Types::Move` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired move.
   #

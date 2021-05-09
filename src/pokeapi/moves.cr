@@ -19,7 +19,7 @@ module PokeAPI::Moves
       return PokeAPI::Types::Move.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::MoveAilment` based on the given *identifier*.
@@ -41,7 +41,7 @@ module PokeAPI::Moves
       return PokeAPI::Types::MoveAilment.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::MoveBattleStyle` based on the given *identifier*.
@@ -68,7 +68,7 @@ module PokeAPI::Moves
       return PokeAPI::Types::MoveBattleStyle.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::MoveCategory` based on the given *identifier*.
@@ -108,7 +108,7 @@ module PokeAPI::Moves
       return PokeAPI::Types::MoveCategory.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::MoveDamageClass` based on the given *identifier*.
@@ -135,7 +135,7 @@ module PokeAPI::Moves
       return PokeAPI::Types::MoveDamageClass.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::MoveLearnMethod` based on the given *identifier*.
@@ -169,7 +169,7 @@ module PokeAPI::Moves
       return PokeAPI::Types::MoveLearnMethod.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::MoveTarget` based on the given *identifier*.
@@ -185,6 +185,6 @@ module PokeAPI::Moves
       return PokeAPI::Types::MoveTarget.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 end

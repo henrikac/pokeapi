@@ -19,7 +19,7 @@ module PokeAPI::Locations
       return PokeAPI::Types::Location.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::LocationArea` based on the given *identifier*.
@@ -35,7 +35,7 @@ module PokeAPI::Locations
       return PokeAPI::Types::LocationArea.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::PalParkArea` based on the given *identifier*.
@@ -64,7 +64,7 @@ module PokeAPI::Locations
       return PokeAPI::Types::PalParkArea.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::Region` based on the given *identifier*.
@@ -96,6 +96,6 @@ module PokeAPI::Locations
       return PokeAPI::Types::Region.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 end

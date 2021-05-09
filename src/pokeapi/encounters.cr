@@ -19,7 +19,7 @@ module PokeAPI::Encounters
       return PokeAPI::Types::EncounterMethod.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::EncounterCondition` based on the given *identifier*.
@@ -53,7 +53,7 @@ module PokeAPI::Encounters
       return PokeAPI::Types::EncounterCondition.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::EncounterConditionValue` based on the given *identifier*.
@@ -69,6 +69,6 @@ module PokeAPI::Encounters
       return PokeAPI::Types::EncounterConditionValue.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 end

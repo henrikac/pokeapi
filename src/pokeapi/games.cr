@@ -35,7 +35,7 @@ module PokeAPI::Games
       return PokeAPI::Types::Generation.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::Pokedex` based on the given *identifier*.
@@ -51,7 +51,7 @@ module PokeAPI::Games
       return PokeAPI::Types::Pokedex.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::Version` based on the given *identifier*.
@@ -67,7 +67,7 @@ module PokeAPI::Games
       return PokeAPI::Types::Version.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::VersionGroup` based on the given *identifier*.
@@ -83,6 +83,6 @@ module PokeAPI::Games
       return PokeAPI::Types::VersionGroup.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 end

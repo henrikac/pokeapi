@@ -19,7 +19,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::Ability.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::Characteristic` based on the given *id*.
@@ -36,7 +36,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::Characteristic.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::EggGroup` based on the given *identifier*.
@@ -52,7 +52,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::EggGroup.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::Gender` based on the given *identifier*.
@@ -79,7 +79,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::Gender.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::GrowthRate` based on the given *identifier*.
@@ -109,7 +109,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::GrowthRate.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::Nature` based on the given *identifier*.
@@ -125,7 +125,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::Nature.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::PokeathlonStat` based on the given *identifier*.
@@ -154,7 +154,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::PokeathlonStat.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::Pokemon` based on the given *identifier*.
@@ -170,7 +170,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::Pokemon.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::LocationAreaEncounter` based on the given *identifier*.
@@ -186,7 +186,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::LocationAreaEncounter.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::PokemonColor` based on the given *identifier*.
@@ -220,7 +220,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::PokemonColor.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::PokemonForm` based on the given *identifier*.
@@ -236,7 +236,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::PokemonForm.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::PokemonHabitat` based on the given *identifier*.
@@ -269,7 +269,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::PokemonHabitat.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::PokemonShape` based on the given *identifier*.
@@ -307,7 +307,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::PokemonShape.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::PokemonSpecies` based on the given *identifier*.
@@ -323,7 +323,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::PokemonSpecies.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::Stat` based on the given *identifier*.
@@ -355,7 +355,7 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::Stat.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::Type` based on the given *identifier*.
@@ -371,6 +371,6 @@ module PokeAPI::Pokemon
       return PokeAPI::Types::Type.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 end

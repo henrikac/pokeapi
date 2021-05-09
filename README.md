@@ -53,6 +53,22 @@ require "pokeapi"
 growth_rate = PokeAPI.growth_rate(2) # => returns growth-rate with id == 2
 ```
 
+#### Errors
+
+If no resource was found a `PokeAPI::NoResourceError` is raised.
+
+```crystal
+require "pokeapi"
+
+begin
+  berry = PokeAPI.berry("weird-unknown-berry")
+rescue ex : PokeAPI::NoResourceError
+  puts ex.status_code # => 404
+  puts ex.status_message # => Not Found
+  puts ex.message # => 404 - Not Found
+end
+```
+
 ## Endpoints
 
 #### Berries

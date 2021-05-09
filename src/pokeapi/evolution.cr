@@ -20,7 +20,7 @@ module PokeAPI::Evolution
       return PokeAPI::Types::EvolutionChain.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::EvolutionTrigger` based on the given *identifier*.
@@ -49,6 +49,6 @@ module PokeAPI::Evolution
       return PokeAPI::Types::EvolutionTrigger.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 end

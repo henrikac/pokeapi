@@ -20,6 +20,6 @@ module PokeAPI::Machines
       return PokeAPI::Types::Machine.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 end

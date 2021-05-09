@@ -32,7 +32,7 @@ module PokeAPI::Contests
       return PokeAPI::Types::ContestType.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::ContestEffect` based on the given *id*.
@@ -49,7 +49,7 @@ module PokeAPI::Contests
       return PokeAPI::Types::ContestEffect.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::SuperContestEffect` based on the given *id*.
@@ -66,6 +66,6 @@ module PokeAPI::Contests
       return PokeAPI::Types::SuperContestEffect.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 end

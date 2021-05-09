@@ -3,6 +3,13 @@ require "http/client"
 # `PokeAPI::Client` handles requests to `pokeapi.co`.
 class PokeAPI::Client
   # Requests `pokeapi.co` for a single item at the given *path*.
+  #
+  # Example:
+  # ```
+  # require "pokeapi"
+  #
+  # response = PokeAPI::Client.get("pokemon/bulbasaur")
+  # ```
   def self.get(path : String) : HTTP::Client::Response
     if path.empty?
       raise ArgumentError.new("path is undefined")
@@ -14,6 +21,13 @@ class PokeAPI::Client
   end
 
   # Requests `pokeapi.co` for *limit* items at the given *path*.
+  #
+  # Example:
+  # ```
+  # require "pokeapi"
+  #
+  # response = PokeAPI::Client.get("pokemon", 20, 0)
+  # ```
   def self.get(path : String, limit : UInt32, offset : UInt32) : HTTP::Client::Response
     if path.empty?
       raise ArgumentError.new("path is undefined")

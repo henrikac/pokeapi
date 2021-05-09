@@ -19,7 +19,7 @@ module PokeAPI::Items
       return PokeAPI::Types::Item.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::ItemAttribute` based on the given *identifier*.
@@ -51,7 +51,7 @@ module PokeAPI::Items
       return PokeAPI::Types::ItemAttribute.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::ItemCategory` based on the given *identifier*.
@@ -67,7 +67,7 @@ module PokeAPI::Items
       return PokeAPI::Types::ItemCategory.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::ItemFlingEffect` based on the given *identifier*.
@@ -98,7 +98,7 @@ module PokeAPI::Items
       return PokeAPI::Types::ItemFlingEffect.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::ItemPocket` based on the given *identifier*.
@@ -130,6 +130,6 @@ module PokeAPI::Items
       return PokeAPI::Types::ItemPocket.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 end

@@ -19,7 +19,7 @@ module PokeAPI::Berries
       return PokeAPI::Types::Berry.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::BerryFirmness` based on the given *identifier*.
@@ -48,7 +48,7 @@ module PokeAPI::Berries
       return PokeAPI::Types::BerryFirmness.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 
   # Returns a `PokeAPI::Types::BerryFlavor` based on the given *identifier*.
@@ -77,6 +77,6 @@ module PokeAPI::Berries
       return PokeAPI::Types::BerryFlavor.from_json(response.body)
     end
 
-    raise Exception.new("#{response.status_code} - #{response.status_message}")
+    raise PokeAPI::NoResourceError.new(response)
   end
 end

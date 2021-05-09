@@ -10,6 +10,7 @@ module Games
   # The identifier can be either the id or the name of the desired generation.
   #
   # Valid generations (2021-05-08):
+  # ```
   # +----+-----------------+
   # | id |      name       |
   # +----+-----------------+
@@ -22,6 +23,7 @@ module Games
   # |  7 | generation-vii  |
   # |  8 | generation-viii |
   # +----+-----------------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def generation(identifier : String | UInt32) : PokeAPI::Types::Generation

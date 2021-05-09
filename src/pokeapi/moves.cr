@@ -48,6 +48,7 @@ module Moves
   # The identifier can be either the id or the name of the desired move battle style.
   #
   # Valid move battle styles (2021-05-08):
+  # ```
   # +----+---------+
   # | id |  name   |
   # +----+---------+
@@ -55,6 +56,7 @@ module Moves
   # |  2 | defense |
   # |  3 | support |
   # +----+---------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def move_battle_style(identifier : String | UInt32) : PokeAPI::Types::MoveBattleStyle
@@ -73,6 +75,7 @@ module Moves
   # The identifier can be either the id or the name of the desired move category.
   #
   # Valid move categories (2021-05-08):
+  # ```
   # +----+--------------------+
   # | id |        name        |
   # +----+--------------------+
@@ -91,6 +94,7 @@ module Moves
   # | 12 | force-switch       |
   # | 13 | unique             |
   # +----+--------------------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string
   def move_category(identifier : String | UInt32) : PokeAPI::Types::MoveCategory
@@ -111,6 +115,7 @@ module Moves
   # The identifier can be either the id or the name of the desired move damage class.
   #
   # Valid move damage classes (2021-05-08):
+  # ```
   # +----+----------+
   # | id |   name   |
   # +----+----------+
@@ -118,6 +123,7 @@ module Moves
   # |  2 | physical |
   # |  3 | special  |
   # +----+----------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def move_damage_class(identifier : String | UInt32) : PokeAPI::Types::MoveDamageClass
@@ -136,6 +142,7 @@ module Moves
   # The identifier can be either the id or the name of the desired move learn method.
   #
   # Valid move learn methods (2021-05-08):
+  # ```
   # +----+--------------------------+
   # | id |           name           |
   # +----+--------------------------+
@@ -150,6 +157,7 @@ module Moves
   # |  9 | xd-purification          |
   # | 10 | form-change              |
   # +----+--------------------------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def move_learn_method(identifier : String | UInt32) : PokeAPI::Types::MoveLearnMethod

@@ -59,6 +59,7 @@ module Pokemon
   # The identifier can be either the id or the name of the desired gender.
   #
   # Valid genders (2021-05-07):
+  # ```
   # +----+------------+
   # | id |    name    |
   # +----+------------+
@@ -66,6 +67,7 @@ module Pokemon
   # |  2 | male       |
   # |  3 | genderless |
   # +----+------------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def gender(identifier : String | UInt32) : PokeAPI::Types::Gender
@@ -84,6 +86,7 @@ module Pokemon
   # The identifier can be either the id or the name of the desired growth rate.
   #
   # Valid growth rates (2021-05-07):
+  # ```
   # +----+---------------------+
   # | id |        name         |
   # +----+---------------------+
@@ -94,6 +97,7 @@ module Pokemon
   # |  5 | slow-then-very-fast |
   # |  6 | fast-then-very-slow |
   # +----+---------------------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def growth_rate(identifier : String | UInt32) : PokeAPI::Types::GrowthRate
@@ -128,6 +132,7 @@ module Pokemon
   # The identifier can be either the id or the name of the desired pokeathlon stat.
   #
   # Valid pokeathlon stats (2021-05-07):
+  # ```
   # +----+---------+
   # | id |  name   |
   # +----+---------+
@@ -137,6 +142,7 @@ module Pokemon
   # |  4 | stamina |
   # |  5 | jump    |
   # +----+---------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def pokeathlon_stat(identifier : String | UInt32) : PokeAPI::Types::PokeathlonStat
@@ -187,6 +193,7 @@ module Pokemon
   # The identifier can be either the id or the name of the desired pokémon color.
   #
   # Valid pokemon colors (2021-05-07):
+  # ```
   # +----+--------+
   # | id |  name  |
   # +----+--------+
@@ -201,6 +208,7 @@ module Pokemon
   # |  9 | white  |
   # | 10 | yellow |
   # +----+--------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def pokemon_color(identifier : String | UInt32) : PokeAPI::Types::PokemonColor
@@ -235,6 +243,7 @@ module Pokemon
   # The identifier can be either the id or the name of the desired pokémon habitat.
   #
   # Valid pokemon habitats (2021-05-07):
+  # ```
   # +----+---------------+
   # | id |     name      |
   # +----+---------------+
@@ -248,6 +257,7 @@ module Pokemon
   # |  8 | urban         |
   # |  9 | waters-edge   |
   # +----+---------------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def pokemon_habitat(identifier : String | UInt32) : PokeAPI::Types::PokemonHabitat
@@ -266,6 +276,7 @@ module Pokemon
   # The identifier can be either the id or the name of the desired pokémon shape.
   #
   # Valid pokemon shapes (2021-05-07):
+  # ```
   # +----+-----------+
   # | id |   name    |
   # +----+-----------+
@@ -284,6 +295,7 @@ module Pokemon
   # | 13 | bug-wings |
   # | 14 | armor     |
   # +----+-----------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def pokemon_shape(identifier : String | UInt32) : PokeAPI::Types::PokemonShape
@@ -318,6 +330,7 @@ module Pokemon
   # The identifier can be either the id or the name of the desired stat.
   #
   # Valid stats (2021-05-07):
+  # ```
   # +----+-----------------+
   # | id |      name       |
   # +----+-----------------+
@@ -330,6 +343,7 @@ module Pokemon
   # |  7 | accuracy        |
   # |  8 | evasion         |
   # +----+-----------------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def stat(identifier : String | UInt32) : PokeAPI::Types::Stat

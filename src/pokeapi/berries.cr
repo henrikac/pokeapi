@@ -26,6 +26,7 @@ module Berries
   # The identifier can be either the id or the name of the desired berry firmness.
   #
   # Valid berry firmnesses (2021-05-07):
+  # ```
   # +----+------------+
   # | id |    name    |
   # +----+------------+
@@ -35,6 +36,7 @@ module Berries
   # |  4 | very-hard  |
   # |  5 | super-hard |
   # +----+------------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def berry_firmness(identifier : String | UInt32) : PokeAPI::Types::BerryFirmness
@@ -53,6 +55,7 @@ module Berries
   # The identifier can be either the id or the name of the desired berry flavor.
   #
   # Valid berry flavors (2021-05-07):
+  # ```
   # +----+--------+
   # | id |  name  |
   # +----+--------+
@@ -62,6 +65,7 @@ module Berries
   # |  4 | bitter |
   # |  5 | sour   |
   # +----+--------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def berry_flavor(identifier : String | UInt32) : PokeAPI::Types::BerryFlavor

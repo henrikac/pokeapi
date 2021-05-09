@@ -26,6 +26,7 @@ module Encounters
   # The identifier can be either the id or the name of the desired encounter condition.
   #
   # Valid encounter conditions (2021-05-07):
+  # ```
   # +----+----------------+
   # | id |      name      |
   # +----+----------------+
@@ -40,6 +41,7 @@ module Encounters
   # |  9 | story-progress |
   # | 10 | other          |
   # +----+----------------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def encounter_condition(identifier : String | UInt32) : PokeAPI::Types::EncounterCondition

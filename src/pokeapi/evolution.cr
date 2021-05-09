@@ -27,6 +27,7 @@ module Evolution
   # The identifier can be either the id or the name of the desired evolution trigger.
   #
   # Valid evolution triggers (2021-05-07):
+  # ```
   # +----+----------+
   # | id |   name   |
   # +----+----------+
@@ -36,6 +37,7 @@ module Evolution
   # |  4 | shed     |
   # |  5 | other    |
   # +----+----------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def evolution_trigger(identifier : String | UInt32) : PokeAPI::Types::EvolutionTrigger

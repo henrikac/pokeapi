@@ -26,6 +26,7 @@ module Items
   # The identifier can be either the id or the name of the desired item attribute.
   #
   # Valid item attributes (2021-05-08):
+  # ```
   # +----+------------------+
   # | id |       name       |
   # +----+------------------+
@@ -38,6 +39,7 @@ module Items
   # |  7 | holdable-active  |
   # |  8 | underground      |
   # +----+------------------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def item_attribute(identifier : String | UInt32) : PokeAPI::Types::ItemAttribute
@@ -72,6 +74,7 @@ module Items
   # The identifier can be either the id or the name of the desired item fling effect.
   #
   # Valid item fling effects (2021-05-08):
+  # ```
   # +----+--------------+
   # | id |     name     |
   # +----+--------------+
@@ -83,6 +86,7 @@ module Items
   # |  6 | poison       |
   # |  7 | flinch       |
   # +----+--------------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def item_fling_effect(identifier : String | UInt32) : PokeAPI::Types::ItemFlingEffect
@@ -101,6 +105,7 @@ module Items
   # The identifier can be either the id or the name of the desired item pocket.
   #
   # Valid item pockets (2021-05-08):
+  # ```
   # +----+-----------+
   # | id |   name    |
   # +----+-----------+
@@ -113,6 +118,7 @@ module Items
   # |  7 | battle    |
   # |  8 | key       |
   # +----+-----------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def item_pocket(identifier : String | UInt32) : PokeAPI::Types::ItemPocket

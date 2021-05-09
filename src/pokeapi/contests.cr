@@ -10,6 +10,7 @@ module Contests
   # The identifier can be either the id or the name of the desired contest type.
   #
   # Valid contest types (2021-05-07):
+  # ```
   # +----+--------+
   # | id |  name  |
   # +----+--------+
@@ -19,6 +20,7 @@ module Contests
   # |  4 | smart  |
   # |  5 | tough  |
   # +----+--------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def contest_type(identifier : String | UInt32) : PokeAPI::Types::ContestType

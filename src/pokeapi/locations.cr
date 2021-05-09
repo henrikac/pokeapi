@@ -42,6 +42,7 @@ module Locations
   # The identifier can be either the id or the name of the desired pal park area.
   #
   # Valid pal park areas (2021-05-08):
+  # ```
   # +----+----------+
   # | id |   name   |
   # +----+----------+
@@ -51,6 +52,7 @@ module Locations
   # |  4 | pond     |
   # |  5 | sea      |
   # +----+----------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def pal_park_area(identifier : String | UInt32) : PokeAPI::Types::PalParkArea
@@ -69,18 +71,20 @@ module Locations
   # The identifier can be either the id or the name of the desired region.
   #
   # Valid regions (2021-05-08):
-  # +----+----------+
-  # | id |   name   |
-  # +----+----------+
-  # |  1 | kanto   |
-  # |  2 | johto    |
-  # |  3 | hoenn |
+  # ```
+  # +----+------------+
+  # | id |    name    |
+  # +----+------------+
+  # |  1 | kanto      |
+  # |  2 | johto      |
+  # |  3 | hoenn      |
   # |  4 | sinnoh     |
   # |  5 | unova      |
   # |  6 | kalos      |
   # |  7 | alola      |
   # |  8 | galar      |
-  # +----+----------+
+  # +----+------------+
+  # ```
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
   def region(identifier : String | UInt32) : PokeAPI::Types::Region

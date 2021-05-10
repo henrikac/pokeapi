@@ -2,7 +2,7 @@ require "./pokeapi/**"
 
 # `PokeAPI` is a wrapper library for [PokéAPI](https://pokeapi.co/docs/v2)
 module PokeAPI
-  VERSION = "0.2.0"
+  VERSION = "0.2.1"
 
   extend Berries
   extend Contests

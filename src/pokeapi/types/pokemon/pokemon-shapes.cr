@@ -12,13 +12,13 @@ module PokeAPI::Types
     property name : String?
 
     @[JSON::Field(key: "awesome_names")]
-    property awesome_names : Array(AwesomeName)?
+    property awesome_names : Array(AwesomeName)
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "pokemon_species")]
-    property pokemon_species : Array(NamedAPIResource)?
+    property pokemon_species : Array(NamedAPIResource)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

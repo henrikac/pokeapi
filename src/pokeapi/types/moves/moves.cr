@@ -39,31 +39,31 @@ module PokeAPI::Types
     property damage_class : NamedAPIResource?
 
     @[JSON::Field(key: "effect_entries")]
-    property effect_entries : Array(VerboseEffect)?
+    property effect_entries : Array(VerboseEffect)
 
     @[JSON::Field(key: "effect_changes")]
-    property effect_changes : Array(AbilityEffectChange)?
+    property effect_changes : Array(AbilityEffectChange)
 
     @[JSON::Field(key: "flavor_text_entries")]
-    property flavor_text_entries : Array(MoveFlavorText)?
+    property flavor_text_entries : Array(MoveFlavorText)
 
     @[JSON::Field(key: "generation")]
     property generation : NamedAPIResource?
 
     @[JSON::Field(key: "machines")]
-    property machines : Array(MachineVersionDetail)?
+    property machines : Array(MachineVersionDetail)
 
     @[JSON::Field(key: "meta")]
     property meta : MoveMetaData?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "past_values")]
-    property past_values : Array(PastMoveStatValues)?
+    property past_values : Array(PastMoveStatValues)
 
     @[JSON::Field(key: "stat_changes")]
-    property stat_changes : Array(MoveStatChange)?
+    property stat_changes : Array(MoveStatChange)
 
     @[JSON::Field(key: "super_contest_effect")]
     property super_contest_effect : APIResource?
@@ -91,10 +91,10 @@ module PokeAPI::Types
     include JSON::Serializable
 
     @[JSON::Field(key: "use_before")]
-    property use_before : Array(NamedAPIResource)?
+    property use_before : Array(NamedAPIResource)
 
     @[JSON::Field(key: "use_after")]
-    property use_after : Array(NamedAPIResource)?
+    property use_after : Array(NamedAPIResource)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]
@@ -180,7 +180,7 @@ module PokeAPI::Types
     property pp : Int32?
 
     @[JSON::Field(key: "effect_entries")]
-    property effect_entries : Array(VerboseEffect)?
+    property effect_entries : Array(VerboseEffect)
 
     @[JSON::Field(key: "type")]
     property type : NamedAPIResource?

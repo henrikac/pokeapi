@@ -15,6 +15,6 @@ module PokeAPI::Types
     property order : Int32?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
   end
 end

@@ -24,13 +24,13 @@ module PokeAPI::Types
     property likes_flavor : NamedAPIResource?
 
     @[JSON::Field(key: "pokeathlon_stat_changes")]
-    property pokeathlon_stat_changes : Array(NatureStatChange)?
+    property pokeathlon_stat_changes : Array(NatureStatChange)
 
     @[JSON::Field(key: "move_battle_style_preferences")]
-    property move_battle_style_preferences : Array(MoveBattleStylePreference)?
+    property move_battle_style_preferences : Array(MoveBattleStylePreference)
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

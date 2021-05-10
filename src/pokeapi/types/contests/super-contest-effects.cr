@@ -12,9 +12,9 @@ module PokeAPI::Types
     property appeal : Int32?
 
     @[JSON::Field(key: "flavor_text_entries")]
-    property flavor_text_entries : Array(FlavorText)?
+    property flavor_text_entries : Array(FlavorText)
 
     @[JSON::Field(key: "moves")]
-    property moves : Array(NamedAPIResource)?
+    property moves : Array(NamedAPIResource)
   end
 end

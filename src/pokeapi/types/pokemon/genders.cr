@@ -12,10 +12,10 @@ module PokeAPI::Types
     property name : String?
 
     @[JSON::Field(key: "pokemon_species_details")]
-    property pokemon_species_details : Array(PokemonSpeciesGender)?
+    property pokemon_species_details : Array(PokemonSpeciesGender)
 
     @[JSON::Field(key: "required_for_evolution")]
-    property required_for_evolution : Array(NamedAPIResource)?
+    property required_for_evolution : Array(NamedAPIResource)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

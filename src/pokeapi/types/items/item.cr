@@ -21,34 +21,34 @@ module PokeAPI::Types
     property fling_effect : NamedAPIResource?
 
     @[JSON::Field(key: "attributes")]
-    property attributes : Array(NamedAPIResource)?
+    property attributes : Array(NamedAPIResource)
 
     @[JSON::Field(key: "category")]
     property category : NamedAPIResource?
 
     @[JSON::Field(key: "effect_entries")]
-    property effect_entries : Array(VerboseEffect)?
+    property effect_entries : Array(VerboseEffect)
 
     @[JSON::Field(key: "flavor_text_entries")]
-    property flavor_text_entries : Array(VersionGroupFlavorText)?
+    property flavor_text_entries : Array(VersionGroupFlavorText)
 
     @[JSON::Field(key: "game_indices")]
-    property game_indices : Array(GenerationGameIndex)?
+    property game_indices : Array(GenerationGameIndex)
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "sprites")]
     property sprites : ItemSprites?
 
     @[JSON::Field(key: "held_by_pokemon")]
-    property held_by_pokemon : Array(ItemHolderPokemon)?
+    property held_by_pokemon : Array(ItemHolderPokemon)
 
     @[JSON::Field(key: "baby_trigger_for")]
     property baby_trigger_for : APIResource?
 
     @[JSON::Field(key: "machines")]
-    property machines : Array(MachineVersionDetail)?
+    property machines : Array(MachineVersionDetail)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]
@@ -67,7 +67,7 @@ module PokeAPI::Types
     property pokemon : NamedAPIResource?
 
     @[JSON::Field(key: "version_details")]
-    property version_details : Array(ItemHolderPokemonVersionDetail)?
+    property version_details : Array(ItemHolderPokemonVersionDetail)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

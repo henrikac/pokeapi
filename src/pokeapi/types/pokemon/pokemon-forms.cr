@@ -39,10 +39,10 @@ module PokeAPI::Types
     property version_group : NamedAPIResource?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "form_names")]
-    property form_names : Array(Name)?
+    property form_names : Array(Name)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

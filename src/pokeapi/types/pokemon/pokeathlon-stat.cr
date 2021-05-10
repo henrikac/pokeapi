@@ -12,7 +12,7 @@ module PokeAPI::Types
     property name : String?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "affecting_natures")]
     property affecting_natures : NaturePokeathlonStatAffectSets?
@@ -23,10 +23,10 @@ module PokeAPI::Types
     include JSON::Serializable
 
     @[JSON::Field(key: "increase")]
-    property increase : Array(NaturePokeathlonStatAffect)?
+    property increase : Array(NaturePokeathlonStatAffect)
 
     @[JSON::Field(key: "decrease")]
-    property decrease : Array(NaturePokeathlonStatAffect)?
+    property decrease : Array(NaturePokeathlonStatAffect)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

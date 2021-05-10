@@ -45,10 +45,10 @@ module PokeAPI::Types
     property growth_rate : NamedAPIResource?
 
     @[JSON::Field(key: "pokedex_numbers")]
-    property pokedex_numbers : Array(PokemonSpeciesDexEntry)?
+    property pokedex_numbers : Array(PokemonSpeciesDexEntry)
 
     @[JSON::Field(key: "egg_groups")]
-    property egg_groups : Array(NamedAPIResource)?
+    property egg_groups : Array(NamedAPIResource)
 
     @[JSON::Field(key: "color")]
     property color : NamedAPIResource?
@@ -69,22 +69,22 @@ module PokeAPI::Types
     property generation : NamedAPIResource?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "pal_park_encounters")]
-    property pal_park_encounters : Array(PalParkEncounterArea)?
+    property pal_park_encounters : Array(PalParkEncounterArea)
 
     @[JSON::Field(key: "flavor_text_entries")]
-    property flavor_text_entries : Array(FlavorText)?
+    property flavor_text_entries : Array(FlavorText)
 
     @[JSON::Field(key: "form_descriptions")]
-    property form_descriptions : Array(Description)?
+    property form_descriptions : Array(Description)
 
     @[JSON::Field(key: "genera")]
-    property genera : Array(Genus)?
+    property genera : Array(Genus)
 
     @[JSON::Field(key: "varieties")]
-    property varieties : Array(PokemonSpeciesVariety)?
+    property varieties : Array(PokemonSpeciesVariety)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

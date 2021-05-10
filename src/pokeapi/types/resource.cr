@@ -14,5 +14,5 @@ class PokeAPI::Types::ResourceList
   property previous_page : String?
 
   @[JSON::Field(key: "results")]
-  property results : Array(NamedAPIResource)?
+  property results : Array(NamedAPIResource)
 end

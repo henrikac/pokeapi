@@ -15,6 +15,6 @@ module PokeAPI::Types
     property condition : NamedAPIResource?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
   end
 end

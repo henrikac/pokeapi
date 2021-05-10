@@ -15,13 +15,13 @@ module PokeAPI::Types
     property formula : String?
 
     @[JSON::Field(key: "descriptions")]
-    property descriptions : Array(Description)?
+    property descriptions : Array(Description)
 
     @[JSON::Field(key: "levels")]
-    property levels : Array(GrowthRateExperienceLevel)?
+    property levels : Array(GrowthRateExperienceLevel)
 
     @[JSON::Field(key: "pokemon_species")]
-    property pokemon_species : Array(NamedAPIResource)?
+    property pokemon_species : Array(NamedAPIResource)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

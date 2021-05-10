@@ -15,9 +15,9 @@ module PokeAPI::Types
     property jam : Int32?
 
     @[JSON::Field(key: "effect_entries")]
-    property effect_entries : Array(Effect)?
+    property effect_entries : Array(Effect)
 
     @[JSON::Field(key: "flavor_text_entries")]
-    property flavor_text_entries : Array(FlavorText)?
+    property flavor_text_entries : Array(FlavorText)
   end
 end

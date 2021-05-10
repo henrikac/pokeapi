@@ -15,12 +15,12 @@ module PokeAPI::Types
     property region : NamedAPIResource?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "game_indices")]
-    property game_indices : Array(GenerationGameIndex)?
+    property game_indices : Array(GenerationGameIndex)
 
     @[JSON::Field(key: "areas")]
-    property areas : Array(NamedAPIResource)?
+    property areas : Array(NamedAPIResource)
   end
 end

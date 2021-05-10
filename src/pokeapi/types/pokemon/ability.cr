@@ -18,19 +18,19 @@ module PokeAPI::Types
     property generation : NamedAPIResource?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "effect_entries")]
-    property effect_entries : Array(VerboseEffect)?
+    property effect_entries : Array(VerboseEffect)
 
     @[JSON::Field(key: "effect_changes")]
-    property effect_changes : Array(AbilityEffectChange)?
+    property effect_changes : Array(AbilityEffectChange)
 
     @[JSON::Field(key: "flavor_text_entries")]
-    property flavor_text_entries : Array(AbilityFlavorText)?
+    property flavor_text_entries : Array(AbilityFlavorText)
 
     @[JSON::Field(key: "pokemon")]
-    property pokemon : Array(AbilityPokemon)?
+    property pokemon : Array(AbilityPokemon)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]
@@ -38,7 +38,7 @@ module PokeAPI::Types
     include JSON::Serializable
 
     @[JSON::Field(key: "effect_entries")]
-    property effect_entries : Array(Effect)?
+    property effect_entries : Array(Effect)
 
     @[JSON::Field(key: "version_group")]
     property version_group : NamedAPIResource?

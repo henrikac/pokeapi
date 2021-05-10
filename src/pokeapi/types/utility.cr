@@ -21,7 +21,7 @@ module PokeAPI::Types
     property iso3166 : String?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]
@@ -65,7 +65,7 @@ module PokeAPI::Types
     property max_level : Int32?
 
     @[JSON::Field(key: "condition_values")]
-    property condition_values : Array(NamedAPIResource)?
+    property condition_values : Array(NamedAPIResource)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]
@@ -151,7 +151,7 @@ module PokeAPI::Types
     property max_chance : Int32?
 
     @[JSON::Field(key: "encounter_details")]
-    property encounter_details : Array(Encounter)?
+    property encounter_details : Array(Encounter)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

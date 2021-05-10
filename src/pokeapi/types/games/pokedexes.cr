@@ -15,19 +15,19 @@ module PokeAPI::Types
     property is_main_series : Bool?
 
     @[JSON::Field(key: "descriptions")]
-    property descriptions : Array(Description)?
+    property descriptions : Array(Description)
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "pokemon_entries")]
-    property pokemon_entries : Array(PokemonEntry)?
+    property pokemon_entries : Array(PokemonEntry)
 
     @[JSON::Field(key: "region")]
     property region : NamedAPIResource?
 
     @[JSON::Field(key: "version_groups")]
-    property version_groups : Array(NamedAPIResource)?
+    property version_groups : Array(NamedAPIResource)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

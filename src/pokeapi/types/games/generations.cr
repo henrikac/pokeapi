@@ -12,24 +12,24 @@ module PokeAPI::Types
     property name : String?
 
     @[JSON::Field(key: "abilities")]
-    property abilities : Array(NamedAPIResource)?
+    property abilities : Array(NamedAPIResource)
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "main_region")]
     property main_region : NamedAPIResource?
 
     @[JSON::Field(key: "moves")]
-    property moves : Array(NamedAPIResource)?
+    property moves : Array(NamedAPIResource)
 
     @[JSON::Field(key: "pokemon_species")]
-    property pokemon_species : Array(NamedAPIResource)?
+    property pokemon_species : Array(NamedAPIResource)
 
     @[JSON::Field(key: "types")]
-    property types : Array(NamedAPIResource)?
+    property types : Array(NamedAPIResource)
 
     @[JSON::Field(key: "version_groups")]
-    property version_groups : Array(NamedAPIResource)?
+    property version_groups : Array(NamedAPIResource)
   end
 end

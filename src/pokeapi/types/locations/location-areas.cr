@@ -15,16 +15,16 @@ module PokeAPI::Types
     property game_index : Int32?
 
     @[JSON::Field(key: "encounter_method_rates")]
-    property encounter_method_rates : Array(EncounterMethodRate)?
+    property encounter_method_rates : Array(EncounterMethodRate)
 
     @[JSON::Field(key: "location")]
     property location : NamedAPIResource?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "pokemon_encounters")]
-    property pokemon_encounters : Array(PokemonEncounter)?
+    property pokemon_encounters : Array(PokemonEncounter)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]
@@ -35,7 +35,7 @@ module PokeAPI::Types
     property encounter_method : NamedAPIResource?
 
     @[JSON::Field(key: "version_details")]
-    property version_details : Array(EncounterVersionDetails)?
+    property version_details : Array(EncounterVersionDetails)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]
@@ -57,6 +57,6 @@ module PokeAPI::Types
     property pokemon : NamedAPIResource?
 
     @[JSON::Field(key: "version_details")]
-    property version_details : Array(VersionEncounterDetail)?
+    property version_details : Array(VersionEncounterDetail)
   end
 end

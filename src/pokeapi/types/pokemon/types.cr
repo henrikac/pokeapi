@@ -15,7 +15,7 @@ module PokeAPI::Types
     property damage_relations : TypeRelations?
 
     @[JSON::Field(key: "game_indices")]
-    property game_indices : GenerationGameIndex?
+    property game_indices : Array(GenerationGameIndex)
 
     @[JSON::Field(key: "generation")]
     property generation : NamedAPIResource?
@@ -24,13 +24,13 @@ module PokeAPI::Types
     property move_damage_class : NamedAPIResource?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "pokemon")]
-    property pokemon : TypePokemon?
+    property pokemon : Array(TypePokemon)
 
     @[JSON::Field(key: "moves")]
-    property moves : Array(NamedAPIResource)?
+    property moves : Array(NamedAPIResource)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]
@@ -49,21 +49,21 @@ module PokeAPI::Types
     include JSON::Serializable
 
     @[JSON::Field(key: "no_damage_to")]
-    property no_damage_to : Array(NamedAPIResource)?
+    property no_damage_to : Array(NamedAPIResource)
 
     @[JSON::Field(key: "half_damage_to")]
-    property half_damage_to : Array(NamedAPIResource)?
+    property half_damage_to : Array(NamedAPIResource)
 
     @[JSON::Field(key: "double_damage_to")]
-    property double_damage_to : Array(NamedAPIResource)?
+    property double_damage_to : Array(NamedAPIResource)
 
     @[JSON::Field(key: "no_damage_from")]
-    property no_damage_from : Array(NamedAPIResource)?
+    property no_damage_from : Array(NamedAPIResource)
 
     @[JSON::Field(key: "half_damage_from")]
-    property half_damage_from : Array(NamedAPIResource)?
+    property half_damage_from : Array(NamedAPIResource)
 
     @[JSON::Field(key: "double_damage_from")]
-    property double_damage_from : Array(NamedAPIResource)?
+    property double_damage_from : Array(NamedAPIResource)
   end
 end

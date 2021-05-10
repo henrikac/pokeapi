@@ -26,10 +26,10 @@ module PokeAPI::Types
     property species : NamedAPIResource?
 
     @[JSON::Field(key: "evolution_details")]
-    property evolution_details : Array(EvolutionDetail)?
+    property evolution_details : Array(EvolutionDetail)
 
     @[JSON::Field(key: "evolves_to")]
-    property evolves_to : Array(ChainLink)?
+    property evolves_to : Array(ChainLink)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

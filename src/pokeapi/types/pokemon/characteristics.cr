@@ -12,12 +12,12 @@ module PokeAPI::Types
     property gene_modulo : Int32?
 
     @[JSON::Field(key: "possible_values")]
-    property possible_values : Array(Int32)?
+    property possible_values : Array(Int32)
 
     @[JSON::Field(key: "highest_stat")]
     property highest_stat : NamedAPIResource?
 
     @[JSON::Field(key: "descriptions")]
-    property descriptions : Array(Description)?
+    property descriptions : Array(Description)
   end
 end

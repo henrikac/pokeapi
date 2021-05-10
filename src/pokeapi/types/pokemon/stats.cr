@@ -24,13 +24,13 @@ module PokeAPI::Types
     property affecting_natures : NatureStatAffectSets?
 
     @[JSON::Field(key: "characteristics")]
-    property characteristics : APIResource?
+    property characteristics : Array(APIResource)
 
     @[JSON::Field(key: "move_damage_class")]
     property move_damage_class : NamedAPIResource?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]
@@ -38,10 +38,10 @@ module PokeAPI::Types
     include JSON::Serializable
 
     @[JSON::Field(key: "increase")]
-    property increase : Array(MoveStatAffect)?
+    property increase : Array(MoveStatAffect)
 
     @[JSON::Field(key: "decrease")]
-    property decrease : Array(MoveStatAffect)?
+    property decrease : Array(MoveStatAffect)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]
@@ -60,9 +60,9 @@ module PokeAPI::Types
     include JSON::Serializable
 
     @[JSON::Field(key: "increase")]
-    property increase : NamedAPIResource?
+    property increase : Array(NamedAPIResource)
 
     @[JSON::Field(key: "decrease")]
-    property decrease : NamedAPIResource?
+    property decrease : Array(NamedAPIResource)
   end
 end

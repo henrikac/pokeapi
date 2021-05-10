@@ -12,13 +12,13 @@ module PokeAPI::Types
     property name : String?
 
     @[JSON::Field(key: "berries")]
-    property berries : Array(FlavorBerryMap)?
+    property berries : Array(FlavorBerryMap)
 
     @[JSON::Field(key: "contest_type")]
     property contest_type : NamedAPIResource?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

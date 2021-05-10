@@ -33,7 +33,7 @@ module PokeAPI::Types
     property firmness : NamedAPIResource?
 
     @[JSON::Field(key: "flavors")]
-    property flavors : Array(BerryFlavorMap)?
+    property flavors : Array(BerryFlavorMap)
 
     @[JSON::Field(key: "item")]
     property item : NamedAPIResource?

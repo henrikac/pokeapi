@@ -27,22 +27,22 @@ module PokeAPI::Types
     property weight : Int32?
 
     @[JSON::Field(key: "abilities")]
-    property abilities : Array(PokemonAbility)?
+    property abilities : Array(PokemonAbility)
 
     @[JSON::Field(key: "forms")]
-    property forms : Array(NamedAPIResource)?
+    property forms : Array(NamedAPIResource)
 
     @[JSON::Field(key: "game_indices")]
-    property game_indices : Array(VersionGameIndex)?
+    property game_indices : Array(VersionGameIndex)
 
     @[JSON::Field(key: "held_items")]
-    property held_items : Array(PokemonHeldItem)?
+    property held_items : Array(PokemonHeldItem)
 
     @[JSON::Field(key: "location_area_encounters")]
     property location_area_encounters : String?
 
     @[JSON::Field(key: "moves")]
-    property moves : Array(PokemonMove)?
+    property moves : Array(PokemonMove)
 
     @[JSON::Field(key: "sprites")]
     property sprites : PokemonSprites?
@@ -51,10 +51,10 @@ module PokeAPI::Types
     property species : NamedAPIResource?
 
     @[JSON::Field(key: "stats")]
-    property stats : Array(PokemonStat)?
+    property stats : Array(PokemonStat)
 
     @[JSON::Field(key: "types")]
-    property types : Array(PokemonType)?
+    property types : Array(PokemonType)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]
@@ -90,7 +90,7 @@ module PokeAPI::Types
     property item : NamedAPIResource?
 
     @[JSON::Field(key: "version_details")]
-    property version_details : Array(PokemonHeldItemVersion)?
+    property version_details : Array(PokemonHeldItemVersion)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]
@@ -112,7 +112,7 @@ module PokeAPI::Types
     property move : NamedAPIResource?
 
     @[JSON::Field(key: "version_group_details")]
-    property version_group_details : Array(PokemonMoveVersion)?
+    property version_group_details : Array(PokemonMoveVersion)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

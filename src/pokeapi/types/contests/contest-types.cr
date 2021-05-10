@@ -15,7 +15,7 @@ module PokeAPI::Types
     property berry_flavor : NamedAPIResource?
 
     @[JSON::Field(key: "names")]
-    property names : Array(ContestName)?
+    property names : Array(ContestName)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

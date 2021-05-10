@@ -12,9 +12,9 @@ module PokeAPI::Types
     property name : String?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "pokemon_species")]
-    property pokemon_species : Array(NamedAPIResource)?
+    property pokemon_species : Array(NamedAPIResource)
   end
 end

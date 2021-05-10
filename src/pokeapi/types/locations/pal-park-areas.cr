@@ -12,10 +12,10 @@ module PokeAPI::Types
     property name : String?
 
     @[JSON::Field(key: "names")]
-    property names : Array(Name)?
+    property names : Array(Name)
 
     @[JSON::Field(key: "pokemon_encounters")]
-    property pokemon_encounters : Array(PalParkEncounterSpecies)?
+    property pokemon_encounters : Array(PalParkEncounterSpecies)
   end
 
   @[JSON::Serializable::Options(emit_nulls: true)]

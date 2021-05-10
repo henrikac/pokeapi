@@ -18,15 +18,15 @@ module PokeAPI::Types
     property generation : NamedAPIResource?
 
     @[JSON::Field(key: "move_learn_methods")]
-    property move_learn_methods : Array(NamedAPIResource)?
+    property move_learn_methods : Array(NamedAPIResource)
 
     @[JSON::Field(key: "pokedexes")]
-    property pokedexes : Array(NamedAPIResource)?
+    property pokedexes : Array(NamedAPIResource)
 
     @[JSON::Field(key: "regions")]
-    property regions : Array(NamedAPIResource)?
+    property regions : Array(NamedAPIResource)
 
     @[JSON::Field(key: "versions")]
-    property versions : Array(NamedAPIResource)?
+    property versions : Array(NamedAPIResource)
   end
 end

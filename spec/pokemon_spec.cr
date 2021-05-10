@@ -273,26 +273,26 @@ describe ".pokemon" do
   end
 end
 
-describe ".pokemon_location_area" do
-  it "should return a pokemon location area" do
+describe ".pokemon_location_areas" do
+  it "should return pokemon location areas" do
     test_data = File.read("./spec/data/pokemon-location-area.json")
     WebMock.stub(:get, "https://pokeapi.co/api/v2/pokemon/1/encounters/")
       .to_return(status: 200, body: test_data)
 
-    location_area = PokeAPI.pokemon_location_area(1)
+    location_area = PokeAPI.pokemon_location_areas(1)
 
     location_area.is_a?(Array(PokeAPI::Types::LocationAreaEncounter)).should be_true
   end
 
   it "should raise an ArgumentError if identifier is an empty string" do
     expect_raises(ArgumentError) do
-      PokeAPI.pokemon_location_area("")
+      PokeAPI.pokemon_location_areas("")
     end
   end
 
   it "should raise an ArgumentError if identifier is 0" do
     expect_raises(ArgumentError) do
-      PokeAPI.pokemon_location_area(0)
+      PokeAPI.pokemon_location_areas(0)
     end
   end
 
@@ -301,7 +301,7 @@ describe ".pokemon_location_area" do
       .to_return(status: 404)
 
     expect_raises(PokeAPI::NoResourceError) do
-      PokeAPI.pokemon_location_area("???")
+      PokeAPI.pokemon_location_areas("???")
     end
   end
 end

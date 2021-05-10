@@ -173,11 +173,11 @@ module PokeAPI::Pokemon
     raise PokeAPI::NoResourceError.new(response)
   end
 
-  # Returns a `PokeAPI::Types::LocationAreaEncounter` based on the given *identifier*.
+  # Returns a an array of `PokeAPI::Types::LocationAreaEncounter` based on the given *identifier*.
   # The identifier can be either the id or the name of the desired pokémon.
   #
   # An `ArgumentError` is raised if the identifier is an empty string or 0
-  def pokemon_location_area(identifier : String | UInt32) : Array(PokeAPI::Types::LocationAreaEncounter)
+  def pokemon_location_areas(identifier : String | UInt32) : Array(PokeAPI::Types::LocationAreaEncounter)
     identifier = PokeAPI::Validator.validate_identifier(identifier)
 
     response = PokeAPI::Client.get("pokemon/#{identifier}/encounters")

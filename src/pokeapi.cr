@@ -14,6 +14,7 @@ module PokeAPI
   extend Machines
   extend Moves
   extend Pokemon
+  extend Utility
 
   # Returns a list of items from the given *endpoint*.
   #

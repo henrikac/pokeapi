@@ -53,6 +53,33 @@ require "pokeapi"
 growth_rate = PokeAPI.growth_rate(2) # => returns growth-rate with id == 2
 ```
 
+#### Cache
+
+Data retrieved from [PokéAPI](https://pokeapi.co/docs/v2) is automaticly cached in-memory. However, the cache can be turned on/off manually if needed.
+
+```crystal
+require "pokeapi"
+
+PokeAPI::CACHE.enable
+PokeAPI::CACHE.disable
+```
+
+It is also possible to clear the cache if needed.
+
+```crystal
+require "pokeapi"
+
+PokeAPI::CACHE.clear
+```
+
+The default time data is cached is set to 30 minutes.
+
+```crystal
+require "pokeapi"
+
+PokeAPI::CACHE.set_cache_time(45.mintues)
+```
+
 #### Errors
 
 If no resource was found a `PokeAPI::NoResourceError` is raised.

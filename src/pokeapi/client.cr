@@ -17,6 +17,10 @@ class PokeAPI::Client
 
     path = path.strip(" /")
 
+    if PokeAPI::CACHE.is_enabled?
+      return get_response(path)
+    end
+
     return HTTP::Client.get("https://pokeapi.co/api/v2/#{path}/")
   end
 
@@ -38,9 +42,33 @@ class PokeAPI::Client
     end
 
     path = path.strip(" /")
-
     params = URI::Params.encode({"limit" => limit.to_s, "offset" => offset.to_s})
     uri = URI.new("https", "pokeapi.co", nil, "/api/v2/#{path}/", params)
+
+    if PokeAPI::CACHE.is_enabled?
+      return get_response(path, uri.query.to_s)
+    end
+
     return HTTP::Client.get(uri)
+  end
+
+  private def self.get_response(path : String, query : String = "") : HTTP::Client::Response
+    url = "https://pokeapi.co/api/v2/#{path}/"
+
+    if !query.empty?
+      url = "#{url}?#{query}"
+    end
+
+    if PokeAPI::CACHE.has_key?(url)
+      cached_data = PokeAPI::CACHE.get(url)
+
+      return HTTP::Client::Response.new(200, cached_data[:data])
+    end
+
+    response = HTTP::Client.get(url)
+
+    PokeAPI::CACHE.add(url, response.body)
+
+    return response
   end
 end

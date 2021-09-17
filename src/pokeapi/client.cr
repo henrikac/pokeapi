@@ -1,6 +1,10 @@
 require "http/client"
 
 # `PokeAPI::Client` handles requests to `pokeapi.co`.
+#
+# NOTE: The methods in `PokeAPI::Client` is not meant to be used directly.
+# It is highly recommened to use the `PokeAPI` methods instead,
+# e.g. `PokeAPI.pokemon` or `PokeAPI.resource`.
 class PokeAPI::Client
   # Requests `pokeapi.co` for a single item at the given *path*.
   #

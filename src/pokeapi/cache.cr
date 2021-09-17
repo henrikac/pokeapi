@@ -21,6 +21,8 @@ class PokeAPI::Cache
   end
 
   # Disables the cache.
+  #
+  # NOTE: This does not clear the cache.
   def disable
     @cache_enabled = false
   end

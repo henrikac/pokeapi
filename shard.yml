@@ -1,10 +1,10 @@
 name: pokeapi
-version: 0.3.0
+version: 0.3.1
 
 authors:
   - Henrik Christensen <sensen1695@hotmail.com>
 
-crystal: 1.0.0
+crystal: ">= 1.0.0"
 
 development_dependencies:
   webmock:

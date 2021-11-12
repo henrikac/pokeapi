@@ -13,7 +13,7 @@ module PokeAPI::Types
 
     @[JSON::Field(key: "items")]
     property items : Array(NamedAPIResource)
-    
+
     @[JSON::Field(key: "names")]
     property names : Array(Name)
 

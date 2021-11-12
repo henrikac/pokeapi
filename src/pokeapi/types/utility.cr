@@ -57,7 +57,7 @@ module PokeAPI::Types
   @[JSON::Serializable::Options(emit_nulls: true)]
   class Encounter
     include JSON::Serializable
-    
+
     @[JSON::Field(key: "min_level")]
     property min_level : Int32?
 

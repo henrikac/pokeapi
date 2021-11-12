@@ -4,7 +4,7 @@ module PokeAPI::Types
   @[JSON::Serializable::Options(emit_nulls: true)]
   class LocationArea
     include JSON::Serializable
-    
+
     @[JSON::Field(key: "id")]
     property id : Int32?
 

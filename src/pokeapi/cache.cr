@@ -40,7 +40,7 @@ class PokeAPI::Cache
     return @cache.empty?
   end
 
-  # Checks if cache contains *key*. 
+  # Checks if cache contains *key*.
   # Returns `true` is key is in cache and the value has not been
   # cached for more than *time_cached*.
   # `false` is returned if key doesn't exist in the cache or if
